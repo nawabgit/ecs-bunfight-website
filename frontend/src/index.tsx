@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: #F7F8FB;
     font-size: 14pt;
+    color: white;
     font-family: Roboto, sans-serif;
   }
 
