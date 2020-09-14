@@ -6,6 +6,7 @@ const AppContainer = styled.div`
   min-height: 100vh;
   max-height: 100vh;
   box-sizing: border-box;
+  padding: 6em 8em;
 
   background-image: radial-gradient(
       circle at 16% 83%,
@@ -32,7 +33,7 @@ const AppContainer = styled.div`
 `;
 
 function App() {
-  return <AppContainer></AppContainer>;
+  return <AppContainer>Hello</AppContainer>;
 }
 
 export default App;
