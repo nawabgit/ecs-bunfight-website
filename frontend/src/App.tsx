@@ -38,16 +38,56 @@ const Panel = styled.div`
 `;
 
 const SocietyPanel = styled(Panel)`
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, 10em);
+
   flex: 7;
   margin-right: 1em;
+  overflow-y: auto;
+  padding: 2em 2em;
 `;
+
 const WelcomePanel = styled(Panel)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   flex: 3;
+  overflow-y: auto;
   margin-left: 1em;
   padding: 2em 2em;
+`;
+
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  background-color: #3e3e3e;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  width: 10em;
+  height: 11em;
+  padding: 1.5em 1rem;
+
+  &:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+  }
+`;
+
+const SocietyAvatar = styled.div`
+  background-color: white;
+  min-height: 5em;
+  min-width: 5em;
+  border-radius: 5em;
+  margin-bottom: 1rem;
 `;
 
 const WelcomeTitle = styled.div`
@@ -62,24 +102,50 @@ const WelcomeDivider = styled.div`
   margin-bottom: 2rem;
 `;
 
-const WelcomeText = styled.div`
+const CenteredText = styled.div`
+  min-height: 2em;
   text-align: center;
 `;
 
 function App() {
   return (
     <AppContainer>
-      <SocietyPanel />
+      <SocietyPanel>
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+        <SocietyCard />
+      </SocietyPanel>
       <WelcomePanel>
         <WelcomeTitle>ECS Bunfight 2020</WelcomeTitle>
         <WelcomeDivider />
-        <WelcomeText>
+        <CenteredText>
           Welcome to the virtual ECS Bunfight 2020. The panel on the left
           contains all of the ECS-supported societies. Click on a society to
           view resources and links. Drop-in sessions through zoom are available.
-        </WelcomeText>
+        </CenteredText>
       </WelcomePanel>
     </AppContainer>
+  );
+}
+
+function SocietyCard() {
+  return (
+    <Card>
+      <SocietyAvatar />
+      <CenteredText>Society Name</CenteredText>
+    </Card>
   );
 }
 
