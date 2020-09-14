@@ -43,7 +43,8 @@ const SocietyPanel = styled(Panel)`
 `;
 const WelcomePanel = styled(Panel)`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   flex: 3;
   margin-left: 1em;
   padding: 2em 2em;
@@ -52,6 +53,17 @@ const WelcomePanel = styled(Panel)`
 const WelcomeTitle = styled.div`
   font-size: 32pt;
   font-weight: 550;
+  margin-bottom: 1rem;
+`;
+
+const WelcomeDivider = styled.div`
+  width: 100%;
+  border-bottom: solid 1px gray;
+  margin-bottom: 2rem;
+`;
+
+const WelcomeText = styled.div`
+  text-align: center;
 `;
 
 function App() {
@@ -60,6 +72,12 @@ function App() {
       <SocietyPanel />
       <WelcomePanel>
         <WelcomeTitle>ECS Bunfight 2020</WelcomeTitle>
+        <WelcomeDivider />
+        <WelcomeText>
+          Welcome to the virtual ECS Bunfight 2020. The panel on the left
+          contains all of the ECS-supported societies. Click on a society to
+          view resources and links. Drop-in sessions through zoom are available.
+        </WelcomeText>
       </WelcomePanel>
     </AppContainer>
   );
