@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const AppContainer = styled.div`
@@ -42,15 +42,25 @@ const SocietyPanel = styled(Panel)`
   margin-right: 1em;
 `;
 const WelcomePanel = styled(Panel)`
+  display: flex;
+  justify-content: center;
   flex: 3;
   margin-left: 1em;
+  padding: 2em 2em;
+`;
+
+const WelcomeTitle = styled.div`
+  font-size: 32pt;
+  font-weight: 550;
 `;
 
 function App() {
   return (
     <AppContainer>
       <SocietyPanel />
-      <WelcomePanel />
+      <WelcomePanel>
+        <WelcomeTitle>ECS Bunfight 2020</WelcomeTitle>
+      </WelcomePanel>
     </AppContainer>
   );
 }
