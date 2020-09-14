@@ -32,8 +32,27 @@ const AppContainer = styled.div`
     linear-gradient(90deg, hsl(18, 0%, 1%), hsl(18, 0%, 1%));
 `;
 
+const Panel = styled.div`
+  background-color: #292929;
+  border-radius: 10px;
+`;
+
+const SocietyPanel = styled(Panel)`
+  flex: 7;
+  margin-right: 1em;
+`;
+const WelcomePanel = styled(Panel)`
+  flex: 3;
+  margin-left: 1em;
+`;
+
 function App() {
-  return <AppContainer>Hello</AppContainer>;
+  return (
+    <AppContainer>
+      <SocietyPanel />
+      <WelcomePanel />
+    </AppContainer>
+  );
 }
 
 export default App;
