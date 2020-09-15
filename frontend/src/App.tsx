@@ -1,5 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}`;
 
 const AppContainer = styled.div`
   display: flex;
@@ -36,6 +39,9 @@ const Panel = styled.div`
   background-color: #292929;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+
+  -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 `;
 
 const SocietyPanel = styled(Panel)`
@@ -73,7 +79,11 @@ const Card = styled.div`
   height: 11em;
   padding: 1.5em 1rem;
 
+  -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
   &:hover {
+    cursor: pointer;
     border: 1px solid;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
       0 0 20px rgba(255, 255, 255, 0.2);
