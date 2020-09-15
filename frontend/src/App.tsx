@@ -66,6 +66,10 @@ const WelcomePanel = styled(Panel)`
   padding: 2em 2em;
 `;
 
+const CenteredText = styled.div`
+  text-align: center;
+`;
+
 const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -101,6 +105,10 @@ const SocietyAvatar = styled.div`
   margin-bottom: 1rem;
 `;
 
+const CardText = styled(CenteredText)`
+  min-height: 2em;
+`;
+
 const WelcomeTitle = styled.div`
   font-size: 32pt;
   font-weight: 550;
@@ -111,11 +119,6 @@ const WelcomeDivider = styled.div`
   width: 100%;
   border-bottom: solid 1px gray;
   margin-bottom: 2rem;
-`;
-
-const CenteredText = styled.div`
-  min-height: 2em;
-  text-align: center;
 `;
 
 function App() {
@@ -155,7 +158,7 @@ function SocietyCard() {
   return (
     <Card>
       <SocietyAvatar />
-      <CenteredText>Society Name</CenteredText>
+      <CardText>Society Name</CardText>
     </Card>
   );
 }
