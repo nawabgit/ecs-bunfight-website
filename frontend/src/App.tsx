@@ -34,6 +34,7 @@ const AppContainer = styled.div`
 
 const Panel = styled.div`
   background-color: #292929;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 `;
 
@@ -66,7 +67,7 @@ const Card = styled.div`
   box-sizing: border-box;
 
   background-color: #3e3e3e;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   width: 10em;
   height: 11em;
