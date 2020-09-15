@@ -79,8 +79,8 @@ const Card = styled.div`
   height: 11em;
   padding: 1.5em 1rem;
 
-  -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: ${fadeIn} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: ${fadeIn} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
   &:hover {
     cursor: pointer;
