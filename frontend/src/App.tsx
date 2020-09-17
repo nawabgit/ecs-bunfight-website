@@ -9,7 +9,7 @@ const AppContainer = styled.div`
   min-height: 100vh;
   max-height: 100vh;
   box-sizing: border-box;
-  padding: 6em 8em;
+  padding: 10vh 8vw;
 
   background-image: radial-gradient(
       circle at 16% 83%,
@@ -38,7 +38,7 @@ const AppContainer = styled.div`
 const Panel = styled.div`
   background-color: #292929;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 1%;
 
   -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -46,13 +46,13 @@ const Panel = styled.div`
 
 const SocietyPanel = styled(Panel)`
   display: grid;
-  grid-gap: 15px;
-  grid-template-columns: repeat(auto-fit, 10em);
+  grid-gap: 2%;
+  grid-template-columns: repeat(5, 1fr);
 
   flex: 7;
-  margin-right: 1em;
+  margin-right: 1%;
   overflow-y: auto;
-  padding: 2em 2em;
+  padding: 2% 2%;
 `;
 
 const WelcomePanel = styled(Panel)`
@@ -62,12 +62,13 @@ const WelcomePanel = styled(Panel)`
 
   flex: 3;
   overflow-y: auto;
-  margin-left: 1em;
-  padding: 2em 2em;
+  margin-left: 1%;
+  padding: 2% 2%;
 `;
 
 const CenteredText = styled.div`
   text-align: center;
+  font-size: 1vw;
 `;
 
 const Card = styled.div`
@@ -78,10 +79,10 @@ const Card = styled.div`
 
   background-color: #3e3e3e;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 10em;
-  height: 11em;
-  padding: 1.5em 1rem;
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  padding: 15% 5%;
 
   -webkit-animation: ${fadeIn} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: ${fadeIn} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -99,10 +100,14 @@ const Card = styled.div`
 
 const SocietyAvatar = styled.div`
   background-color: white;
-  min-height: 5em;
-  min-width: 5em;
-  border-radius: 5em;
-  margin-bottom: 1rem;
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 10%;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
 `;
 
 const CardText = styled(CenteredText)`
@@ -110,15 +115,15 @@ const CardText = styled(CenteredText)`
 `;
 
 const WelcomeTitle = styled.div`
-  font-size: 32pt;
+  font-size: 2vw;
   font-weight: 550;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
 `;
 
 const WelcomeDivider = styled.div`
   width: 100%;
   border-bottom: solid 1px gray;
-  margin-bottom: 2rem;
+  margin-bottom: 5%;
 `;
 
 function App() {
