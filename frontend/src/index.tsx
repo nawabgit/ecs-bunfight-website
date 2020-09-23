@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
+import BuiltTitling from "./fonts/built-titling-sb.ttf";
+
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
+  @font-face {
+    font-family: "Built Titling Bold";
+    src: url(${BuiltTitling}) format("truetype");
+  }
 
   html, body {
     margin: 0;

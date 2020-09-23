@@ -115,9 +115,10 @@ const CardText = styled(CenteredText)`
 `;
 
 const WelcomeTitle = styled.div`
-  font-size: 2vw;
-  font-weight: 550;
+  font-size: 3vw;
+  font-weight: 500;
   margin-bottom: 5%;
+  font-family: "Built Titling Bold";
 `;
 
 const WelcomeDivider = styled.div`
@@ -130,21 +131,21 @@ function App() {
   return (
     <AppContainer>
       <SocietyPanel>
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
-        <SocietyCard />
+        <SocietyCard name="ECSS" />
+        <SocietyCard name="Hackasoton" />
+        <SocietyCard name="DevECS" />
+        <SocietyCard name="FutureWorlds" />
+        <SocietyCard name="Wireless Society (SUWS)" />
+        <SocietyCard name="RoboSoc" />
+        <SocietyCard name="Toastrack" />
+        <SocietyCard name="Soapbox Racers" />
+        <SocietyCard name="Cyber Security Society (SUCCS)" />
+        <SocietyCard name="Spaceflight Society (SUSF)" />
+        <SocietyCard name="Robotics Outreach (SRO)" />
+        <SocietyCard name="ECSS FC" />
+        <SocietyCard name="ECS Empower" />
+        <SocietyCard name="AISoc (USAIS)" />
+        <SocietyCard name="MedTech" />
       </SocietyPanel>
       <WelcomePanel>
         <WelcomeTitle>ECS Bunfight 2020</WelcomeTitle>
@@ -159,11 +160,11 @@ function App() {
   );
 }
 
-function SocietyCard() {
+function SocietyCard({ name }) {
   return (
     <Card>
       <SocietyAvatar />
-      <CardText>Society Name</CardText>
+      <CardText>{name}</CardText>
     </Card>
   );
 }
