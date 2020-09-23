@@ -1,6 +1,14 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+import { ReactComponent as ECSSLogo } from "./images/ecss-logo.svg";
+import { ReactComponent as FutureWorldsLogo } from "./images/future-worlds-logo.svg";
+import { ReactComponent as EmpowerLogo } from "./images/empower-logo.svg";
+import { ReactComponent as MedTechLogo } from "./images/medtech-logo.svg";
+import { ReactComponent as RoboSocLogo } from "./images/robosoc-logo.svg";
+import { ReactComponent as SUSFLogo } from "./images/susf-logo.svg";
+import { ReactComponent as SUWSLogo } from "./images/suws-logo.svg";
+
 const fadeIn = keyframes`
 0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}`;
 
@@ -111,6 +119,7 @@ const SocietyAvatar = styled.div`
 `;
 
 const CardText = styled(CenteredText)`
+  padding-top: 5%;
   min-height: 2em;
 `;
 
@@ -131,21 +140,133 @@ function App() {
   return (
     <AppContainer>
       <SocietyPanel>
-        <SocietyCard name="ECSS" />
-        <SocietyCard name="Hackasoton" />
-        <SocietyCard name="DevECS" />
-        <SocietyCard name="FutureWorlds" />
-        <SocietyCard name="Wireless Society (SUWS)" />
-        <SocietyCard name="RoboSoc" />
-        <SocietyCard name="Toastrack" />
-        <SocietyCard name="Soapbox Racers" />
-        <SocietyCard name="Cyber Security Society (SUCCS)" />
-        <SocietyCard name="Spaceflight Society (SUSF)" />
-        <SocietyCard name="Robotics Outreach (SRO)" />
-        <SocietyCard name="ECSS FC" />
-        <SocietyCard name="ECS Empower" />
-        <SocietyCard name="AISoc (USAIS)" />
-        <SocietyCard name="MedTech" />
+        <SocietyCard
+          name="ECSS"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <ECSSLogo x="11" y="11" width={"80%"} height={"80%"} />
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Hackasoton"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="DevECS"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Future Worlds"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <FutureWorldsLogo x="22" y="20" width={"60%"} height={"60%"} />
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Wireless Society (SUWS)"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <SUWSLogo x="20" y="22" width={"60%"} height={"60%"} />
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="RoboSoc"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <RoboSocLogo x="21" y="16" width={"60%"} height={"60%"} />
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Toastrack"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Soapbox Racers"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Cyber Security Society (SUCSS)"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Spaceflight Society (SUSF)"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <SUSFLogo x="20" y="20" width={"60%"} height={"60%"} />
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="Robotics Outreach (SRO)"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="ECSS FC"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="ECS Empower"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <EmpowerLogo x="17" y="15" width={"65%"} height={"65%"} />
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="AISoc (USAIS)"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+            </svg>
+          }
+        />
+        <SocietyCard
+          name="MedTech"
+          logo={
+            <svg height="100" width="100">
+              <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <MedTechLogo x="18" y="17" width={"65%"} height={"65%"} />
+            </svg>
+          }
+        />
       </SocietyPanel>
       <WelcomePanel>
         <WelcomeTitle>ECS Bunfight 2020</WelcomeTitle>
@@ -160,10 +281,10 @@ function App() {
   );
 }
 
-function SocietyCard({ name }) {
+function SocietyCard({ name, logo }) {
   return (
     <Card>
-      <SocietyAvatar />
+      {logo}
       <CardText>{name}</CardText>
     </Card>
   );
