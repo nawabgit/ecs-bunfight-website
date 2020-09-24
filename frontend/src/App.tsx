@@ -106,18 +106,6 @@ const Card = styled.div`
   }
 `;
 
-const SocietyAvatar = styled.div`
-  background-color: white;
-  width: 50%;
-  border-radius: 50%;
-  margin-bottom: 10%;
-  &:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
-`;
-
 const CardText = styled(CenteredText)`
   padding-top: 5%;
   min-height: 2em;
