@@ -226,12 +226,12 @@ function WelcomeScreen() {
         />
       </SocietyPanel>
       <WelcomePanel>
-        <WelcomeTitle>ECS Bunfight 2020</WelcomeTitle>
+        <WelcomeTitle>ECS Expo 2020</WelcomeTitle>
         <WelcomeDivider />
         <CenteredText>
-          Welcome to the virtual ECS Bunfight 2020. The panel on the left
-          contains all of the ECS-supported societies. Click on a society to
-          view resources and links. Drop-in sessions through zoom are available.
+          Welcome to the virtual ECS Expo 2020. The panel on the left contains
+          all of the ECS-supported societies. Click on a society to view
+          resources and links. Drop-in sessions through zoom are available.
         </CenteredText>
       </WelcomePanel>
     </>
