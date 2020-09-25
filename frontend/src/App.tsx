@@ -20,7 +20,6 @@ const AppContainer = styled.div`
   min-height: 100vh;
   max-height: 100vh;
   box-sizing: border-box;
-  padding: 10vh 8vw;
 
   background-image: radial-gradient(
       circle at 16% 83%,
@@ -46,6 +45,15 @@ const AppContainer = styled.div`
     linear-gradient(90deg, hsl(18, 0%, 1%), hsl(18, 0%, 1%));
 `;
 
+const WelcomeContainer = styled(AppContainer)`
+  padding: 10vh 8vw;
+`;
+
+const SocietyContainer = styled(AppContainer)`
+  justify-content: center;
+  padding: 9vh 7vw;
+`;
+
 const SelectedPanel = styled(BasePanel)`
   display: grid;
   grid-gap: 2%;
@@ -61,14 +69,19 @@ function App() {
   const [selectedSoc, setSelectedSoc] = useState("");
 
   return (
-    <AppContainer>
-      {!selectedSoc && <WelcomeScreen setSelectedSoc={setSelectedSoc} />}
-      {selectedSoc === "DevECS" && (
-        <SelectedPanel>
-          <DevECS />
-        </SelectedPanel>
+    <>
+      {!selectedSoc && (
+        <WelcomeContainer>
+          <WelcomeScreen setSelectedSoc={setSelectedSoc} />
+        </WelcomeContainer>
       )}
-    </AppContainer>
+
+      {selectedSoc === "DevECS" && (
+        <SocietyContainer>
+          <DevECS />
+        </SocietyContainer>
+      )}
+    </>
   );
 }
 
