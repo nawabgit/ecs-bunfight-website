@@ -92,19 +92,12 @@ function Robosoc() {
               <TippyPair>
                 <Icon path={mdiMapMarker} size={0.7} />
                 <TippyHyperlink
-                  href="https://meet.google.com/mcj-zhdj-aff"
+                  href="https://teams.microsoft.com/l/meetup-join/19%3a11b00874014745ae9bf7fb256fb0b811%40thread.tacv2/1601244796222?context=%7b%22Tid%22%3a%224a5378f9-29f4-4d3e-be89-669d03ada9d8%22%2c%22Oid%22%3a%22c08e33eb-3dfb-49c7-bf29-e5008ffb01fe%22%7d"
                   target="_blank"
                 >
-                  Google Meets
+                  Microsoft Teams
                 </TippyHyperlink>
               </TippyPair>
-              <TippyHyperlink
-                style={{ marginTop: "1rem" }}
-                href="https://rb.gy/j0xgwz/"
-                target="_blank"
-              >
-                Add to Google Calendar
-              </TippyHyperlink>
             </TippyContent>
           }
           placement="left-start"
