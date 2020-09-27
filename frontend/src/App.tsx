@@ -10,6 +10,7 @@ import SUWS from "./features/SUWS";
 import Robosoc from "./features/Robosoc";
 import SoapboxRacers from "./features/SoapboxRacers";
 import SUCSS from "./features/SUCSS";
+import SUSF from "./features/SUSF";
 
 const AppContainer = styled.div`
   display: flex;
@@ -69,6 +70,11 @@ function App() {
       <Route path="/cyber-security-society-sucss">
         <SocietyContainer>
           <SUCSS />
+        </SocietyContainer>
+      </Route>
+      <Route path="/spaceflight-society-susf">
+        <SocietyContainer>
+          <SUSF />
         </SocietyContainer>
       </Route>
       <Redirect to="/" />

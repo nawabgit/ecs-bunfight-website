@@ -9,6 +9,7 @@ import {
   mdiFacebook,
   mdiAt,
   mdiDiscord,
+  mdiTwitter,
 } from "@mdi/js";
 import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
 
@@ -32,7 +33,7 @@ import {
   Sidebar,
 } from "../common/societyComponents";
 
-function SUCSS() {
+function SUSF() {
   return (
     <CenteredPanel>
       <Wrapper>
@@ -43,27 +44,38 @@ function SUCSS() {
             </Circle>
           </Link>
           <NavBar>
-            <NavLink to="/cyber-security-society-sucss/presentation">
+            <NavLink to="/spaceflight-society-susf/video">Video</NavLink>
+            <NavLink to="/spaceflight-society-susf/presentation">
               Presentation
             </NavLink>
-            <NavLink to="/cyber-security-society-sucss/qna">{"Q&A"}</NavLink>
+            <NavLink to="/spaceflight-society-susf/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
           <Switch>
-            <Route path="/cyber-security-society-sucss/presentation">
+            <Route path="/spaceflight-society-susf/video">
               <IFrame
-                src="https://docs.google.com/presentation/d/e/2PACX-1vQgeHCwbZfMrQkyBvgJQufhYGHbL_iRk1nr5EeH05UtOZ8JmktPz_q_XAct9Zq3eQ/embed?start=false&loop=false&delayms=3000"
+                src="https://www.youtube.com/embed/ZoMuBMh2TCw"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                width="800"
+                height="629"
+                allowFullScreen={true}
+              ></IFrame>
+            </Route>
+            <Route path="/spaceflight-society-susf/presentation">
+              <IFrame
+                src="https://docs.google.com/presentation/d/e/2PACX-1vS__RuHtYV7aFQ97JWYLmAmnWQVkLigaR8fLGiCw4vboKNBwbA02KQjFc0kiJhXRg/embed?start=false&loop=false&delayms=3000"
                 frameBorder="0"
                 width="800"
                 height="629"
                 allowFullScreen={true}
               ></IFrame>
             </Route>
-            <Route path="/cyber-security-society-sucss/qna">
+            <Route path="/spaceflight-society-susf/qna">
               <div>:(</div>
             </Route>
-            <Redirect to="/cyber-security-society-sucss/presentation" />
+            <Redirect to="/spaceflight-society-susf/video" />
           </Switch>
         </Presentation>
       </Wrapper>
@@ -74,7 +86,14 @@ function SUCSS() {
               <TippyHeader>Meet-and-greet</TippyHeader>
               <p>
                 This society is <strong>not</strong> hosting a meet-and-greet.
-                Check their social media instead!
+                Check out their{" "}
+                <TippyHyperlink
+                  href="https://sucss.org/discord/"
+                  target="_blank"
+                >
+                  Discord
+                </TippyHyperlink>{" "}
+                instead!
               </p>
             </TippyContent>
           }
@@ -112,33 +131,39 @@ function SUCSS() {
             <TippyContent>
               <TippyHeader>Social platforms</TippyHeader>
               <TippyPair>
-                <Icon path={mdiAt} size={0.7} />
-                <TippyHyperlink href="mailto:sucss@soton.ac.uk" target="_blank">
-                  sucss@soton.ac.uk
+                <Icon path={mdiFacebook} size={0.7} />
+                <TippyHyperlink
+                  href="https://www.facebook.com/suspaceflight/"
+                  target="_blank"
+                >
+                  https://www.facebook.com/suspaceflight/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
-                <Icon path={mdiFacebook} size={0.7} />
+                <Icon path={mdiTwitter} size={0.7} />
                 <TippyHyperlink
-                  href="https://www.facebook.com/sotoncyber/"
+                  href="https://twitter.com/SUSpaceflight/"
                   target="_blank"
                 >
-                  https://www.facebook.com/sotoncyber/
+                  https://twitter.com/SUSpaceflight/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiDiscord} size={0.7} />
                 <TippyHyperlink
-                  href="https://sucss.org/discord/"
+                  href="https://discord.gg/c7QEUBb"
                   target="_blank"
                 >
-                  https://sucss.org/discord/
+                  https://discord.gg/c7QEUBb/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiWeb} size={0.7} />
-                <TippyHyperlink href="https://www.sucss.org/" target="_blank">
-                  https://www.sucss.org/
+                <TippyHyperlink
+                  href="https://spaceflight.soton.ac.uk/"
+                  target="_blank"
+                >
+                  https://spaceflight.soton.ac.uk/
                 </TippyHyperlink>
               </TippyPair>
             </TippyContent>
@@ -156,4 +181,4 @@ function SUCSS() {
   );
 }
 
-export default SUCSS;
+export default SUSF;
