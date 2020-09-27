@@ -45,20 +45,23 @@ export const NavBar = styled.nav`
   margin-left: 3.5rem;
 
   & > a {
+    margin-left: 2rem;
+
     font-size: 24pt;
     font-weight: 500;
 
-    color: white;
     text-decoration: none;
-    border-bottom: solid 5px white;
+    color: grey;
+    border-bottom: none;
 
-    &:last-child {
-      color: grey;
-      text-decoration: none;
-      border-bottom: none;
-
-      margin-left: 2rem;
+    &:first-child {
+      margin-left: 0rem;
     }
+  }
+
+  .active {
+    color: white;
+    border-bottom: solid 5px white;
   }
 `;
 
