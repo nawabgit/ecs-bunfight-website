@@ -14,7 +14,7 @@ const fadeIn = keyframes`
 
 const BasePanel = styled.div`
   background-color: #292929;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
   border-radius: 1%;
 
   -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
