@@ -11,6 +11,7 @@ import Robosoc from "./features/Robosoc";
 import SoapboxRacers from "./features/SoapboxRacers";
 import SUCSS from "./features/SUCSS";
 import SUSF from "./features/SUSF";
+import SRO from "./features/SRO";
 
 const AppContainer = styled.div`
   display: flex;
@@ -75,6 +76,11 @@ function App() {
       <Route path="/spaceflight-society-susf">
         <SocietyContainer>
           <SUSF />
+        </SocietyContainer>
+      </Route>
+      <Route path="/robotics-outreach-sro">
+        <SocietyContainer>
+          <SRO />
         </SocietyContainer>
       </Route>
       <Redirect to="/" />
