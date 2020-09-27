@@ -6,7 +6,12 @@ import {
   mdiAccountPlus,
   mdiAccountGroup,
   mdiArrowLeftThick,
+  mdiAt,
+  mdiWeb,
+  mdiFacebook,
 } from "@mdi/js";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 const IFrame = styled.iframe`
   border-radius: 1%;
@@ -24,7 +29,7 @@ const CenteredPanel = styled.div`
   padding: 2em 2em;
 
   background-color: #292929;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   border-radius: 1em;
 
   -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -114,6 +119,57 @@ const Circle = styled.div`
   }
 `;
 
+const StyledTippy = styled(Tippy)`
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+`;
+
+const TippyContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+`;
+
+const TippyHeader = styled.h2`
+  margin: 0.3rem 0rem;
+`;
+
+const TippyPair = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0.25rem 0rem;
+
+  * {
+    &:first-child {
+      margin-right: 0.25rem;
+    }
+  }
+`;
+
+const TippyHyperlink = styled.a`
+  color: #add8e6;
+`;
+
+const TippyButton = styled.a`
+   display: inline-block;
+   padding: 0.35em 1.2em;
+   border: 0.1em solid #ffffff;
+   margin: 0 0.3em 0.3em 0;
+   border-radius: 0.12em;
+   box-sizing: border-box;
+   text-decoration: none;
+  background-color: transparent;
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   color: #ffffff;
+   text-align: center;
+   transition: all 0.2s;
+  &:hover {
+     color: #000000;
+     background-color: #ffffff;
+  }
+`;
+
 function DevECS() {
   return (
     <CenteredPanel>
@@ -138,15 +194,89 @@ function DevECS() {
         </Presentation>
       </Wrapper>
       <Sidebar>
-        <Circle>
-          <Icon path={mdiMessageVideo} size={1} />
-        </Circle>
-        <Circle>
-          <Icon path={mdiAccountPlus} size={1} />
-        </Circle>
-        <Circle>
-          <Icon path={mdiAccountGroup} size={1} />
-        </Circle>
+        <StyledTippy
+          content={
+            <TippyContent>
+              <TippyHeader>Meet-and-greet</TippyHeader>
+              <p>
+                This society is <strong>not</strong> hosting a meet-and-greet.
+                Check their social media instead!
+              </p>
+            </TippyContent>
+          }
+          placement="left-start"
+          arrow={true}
+          interactive={true}
+        >
+          <Circle>
+            <Icon path={mdiMessageVideo} size={1} />
+          </Circle>
+        </StyledTippy>
+        <StyledTippy
+          content={
+            <TippyContent>
+              <TippyHeader>Sign up</TippyHeader>
+              <p>
+                Sign up to work opportunities with DevECS by clicking the button
+                below!
+              </p>
+              <TippyButton
+                href="https://tinyurl.com/devecs2020"
+                target="_blank"
+              >
+                Sign Up
+              </TippyButton>
+            </TippyContent>
+          }
+          placement="left"
+          arrow={true}
+          interactive={true}
+        >
+          <Circle>
+            <Icon path={mdiAccountPlus} size={1} />
+          </Circle>
+        </StyledTippy>
+        <StyledTippy
+          content={
+            <TippyContent>
+              <TippyHeader>Social platforms</TippyHeader>
+              <TippyPair>
+                <Icon path={mdiAt} size={0.7} />
+                <TippyHyperlink
+                  href="mailto:devecs@soton.ac.uk"
+                  target="_blank"
+                >
+                  devecs@soton.ac.uk
+                </TippyHyperlink>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiWeb} size={0.7} />
+                <TippyHyperlink
+                  href="https://devecs.ecs.soton.ac.uk/student/"
+                  target="_blank"
+                >
+                  https://devecs.ecs.soton.ac.uk/student/
+                </TippyHyperlink>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiFacebook} size={0.7} />
+                <TippyHyperlink
+                  href="https://www.facebook.com/devecs/"
+                  target="_blank"
+                >
+                  https://www.facebook.com/devecs/
+                </TippyHyperlink>
+              </TippyPair>
+            </TippyContent>
+          }
+          placement="left-end"
+          arrow={true}
+          interactive={true}
+        >
+          <Circle>
+            <Icon path={mdiAccountGroup} size={1} />
+          </Circle>
+        </StyledTippy>
       </Sidebar>
     </CenteredPanel>
   );
