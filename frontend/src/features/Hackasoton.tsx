@@ -122,10 +122,10 @@ function DevECS() {
               <TippyPair>
                 <Icon path={mdiFacebook} size={0.7} />
                 <TippyHyperlink
-                  href="http://facebook.com/HackaSoton/"
+                  href="http://www.facebook.com/HackaSoton/"
                   target="_blank"
                 >
-                  http://facebook.com/HackaSoton/
+                  http://www.facebook.com/HackaSoton/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
@@ -140,10 +140,10 @@ function DevECS() {
               <TippyPair>
                 <Icon path={mdiWeb} size={0.7} />
                 <TippyHyperlink
-                  href="http://hackthesouth.co.uk/"
+                  href="http://www.hackthesouth.co.uk/"
                   target="_blank"
                 >
-                  http://hackthesouth.co.uk/
+                  http://www.hackthesouth.co.uk/
                 </TippyHyperlink>
               </TippyPair>
             </TippyContent>

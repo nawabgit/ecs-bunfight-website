@@ -115,10 +115,10 @@ function DevECS() {
               <TippyPair>
                 <Icon path={mdiWeb} size={0.7} />
                 <TippyHyperlink
-                  href="https://devecs.ecs.soton.ac.uk/student/"
+                  href="https://www.devecs.ecs.soton.ac.uk/student/"
                   target="_blank"
                 >
-                  https://devecs.ecs.soton.ac.uk/student/
+                  https://www.devecs.ecs.soton.ac.uk/student/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
