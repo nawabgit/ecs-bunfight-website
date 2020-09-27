@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import WelcomeScreen from "./features/WelcomeScreen";
+import Hackasoton from "./features/Hackasoton";
 import DevECS from "./features/DevECS";
 
 const AppContainer = styled.div`
@@ -31,6 +32,11 @@ function App() {
         </WelcomeContainer>
       )}
 
+      {selectedSoc === "Hackasoton" && (
+        <SocietyContainer>
+          <Hackasoton />
+        </SocietyContainer>
+      )}
       {selectedSoc === "DevECS" && (
         <SocietyContainer>
           <DevECS />
