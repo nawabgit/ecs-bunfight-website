@@ -5,6 +5,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import WelcomeScreen from "./features/WelcomeScreen";
 import Hackasoton from "./features/Hackasoton";
 import DevECS from "./features/DevECS";
+import FutureWorlds from "./features/FutureWorlds";
 
 const AppContainer = styled.div`
   display: flex;
@@ -40,6 +41,11 @@ function App() {
       <Route path="/devecs">
         <SocietyContainer>
           <DevECS />
+        </SocietyContainer>
+      </Route>
+      <Route path="/future-worlds">
+        <SocietyContainer>
+          <FutureWorlds />
         </SocietyContainer>
       </Route>
       <Redirect to="/" />
