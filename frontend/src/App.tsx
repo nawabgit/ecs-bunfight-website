@@ -8,6 +8,7 @@ import DevECS from "./features/DevECS";
 import FutureWorlds from "./features/FutureWorlds";
 import SUWS from "./features/SUWS";
 import Robosoc from "./features/Robosoc";
+import SoapboxRacers from "./features/SoapboxRacers";
 
 const AppContainer = styled.div`
   display: flex;
@@ -59,6 +60,12 @@ function App() {
           <Robosoc />
         </SocietyContainer>
       </Route>
+      <Route path="/soapbox-racers">
+        <SocietyContainer>
+          <SoapboxRacers />
+        </SocietyContainer>
+      </Route>
+      <Redirect to="/" />
     </Switch>
   );
 }

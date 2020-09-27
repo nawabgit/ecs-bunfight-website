@@ -116,7 +116,7 @@ function Robosoc() {
                 Sign up to Robosoc through SUSU by clicking the button below!
               </p>
               <TippyButton
-                href="https://www.susu.org/groups/robosoc/"
+                href="https://www.susu.org/groups/robosoc"
                 target="_blank"
               >
                 Sign Up

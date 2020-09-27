@@ -7,14 +7,16 @@ import {
   mdiArrowLeftThick,
   mdiWeb,
   mdiFacebook,
+  mdiTwitter,
+  mdiLinkedin,
+  mdiInstagram,
   mdiCalendar,
   mdiClockTimeFour,
   mdiMapMarker,
-  mdiTwitter,
 } from "@mdi/js";
 import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
-
 import "tippy.js/dist/tippy.css";
+
 import {
   StyledTippy,
   TippyContent,
@@ -34,7 +36,7 @@ import {
   Sidebar,
 } from "../common/societyComponents";
 
-function SUWS() {
+function SoapboxRacers() {
   return (
     <CenteredPanel>
       <Wrapper>
@@ -45,27 +47,26 @@ function SUWS() {
             </Circle>
           </Link>
           <NavBar>
-            <NavLink to="/wireless-society-suws/presentation">
-              Presentation
-            </NavLink>
-            <NavLink to="/wireless-society-suws/qna">{"Q&A"}</NavLink>
+            <NavLink to="/soapbox-racers/video">Video</NavLink>
+            <NavLink to="/soapbox-racers/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
           <Switch>
-            <Route path="/wireless-society-suws/presentation">
+            <Route path="/soapbox-racers/video">
               <IFrame
-                src="https://docs.google.com/presentation/d/e/2PACX-1vQMck2jL6HG-3wq5K1C7IHW2qpqFXbYqyhllKG3P5C3f8AWVHeq6Y5zS8vul68mEw/embed?start=false&loop=false&delayms=3000"
+                src="https://www.youtube.com/embed/aDlf7G4gz_c"
                 frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 width="800"
                 height="629"
                 allowFullScreen={true}
               ></IFrame>
             </Route>
-            <Route path="/wireless-society-suws/qna">
+            <Route path="/soapbox-racers/qna">
               <div>:(</div>
             </Route>
-            <Redirect to="/wireless-society-suws/presentation" />
+            <Redirect to="/soapbox-racers/video" />
           </Switch>
         </Presentation>
       </Wrapper>
@@ -76,20 +77,15 @@ function SUWS() {
               <TippyHeader>Meet-and-greet</TippyHeader>
               <TippyPair>
                 <Icon path={mdiCalendar} size={0.7} />
-                <span>Thursday 1st October</span>
+                <span>Friday 2nd October</span>
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiClockTimeFour} size={0.7} />
-                <span>18:00</span>
+                <span>16:00 - 16:45</span>
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiMapMarker} size={0.7} />
-                <TippyHyperlink
-                  href="https://teams.microsoft.com/l/meetup-join/19%3ae9c1805acc39404983470da1c62c87d9%40thread.tacv2/1600456551789?context=%7b%22Tid%22%3a%224a5378f9-29f4-4d3e-be89-669d03ada9d8%22%2c%22Oid%22%3a%226d0303f7-f833-40fd-8bb1-44629be6a794%22%7d"
-                  target="_blank"
-                >
-                  Microsoft Teams
-                </TippyHyperlink>
+                <span>The Cube</span>
               </TippyPair>
             </TippyContent>
           }
@@ -105,11 +101,11 @@ function SUWS() {
           content={
             <TippyContent>
               <TippyHeader>Sign up</TippyHeader>
-              <p>Sign up to SUWS through SUSU by clicking the button below!</p>
-              <TippyButton
-                href="https://www.susu.org/groups/sown-suws"
-                target="_blank"
-              >
+              <p>
+                Sign up to the Soapbox Racers society through SUSU by clicking
+                the button below!
+              </p>
+              <TippyButton href="https://www.susu.org/groups/soapbox-racers">
                 Sign Up
               </TippyButton>
             </TippyContent>
@@ -129,25 +125,10 @@ function SUWS() {
               <TippyPair>
                 <Icon path={mdiFacebook} size={0.7} />
                 <TippyHyperlink
-                  href="https://www.facebook.com/groups/g3kmi/"
+                  href="https://www.facebook.com/UoSSoapbox/"
                   target="_blank"
                 >
-                  https://www.facebook.com/groups/g3kmi/
-                </TippyHyperlink>
-              </TippyPair>
-              <TippyPair>
-                <Icon path={mdiTwitter} size={0.7} />
-                <TippyHyperlink
-                  href="https://www.twitter.com/g3kmi/"
-                  target="_blank"
-                >
-                  https://www.twitter.com/g3kmi/
-                </TippyHyperlink>
-              </TippyPair>
-              <TippyPair>
-                <Icon path={mdiWeb} size={0.7} />
-                <TippyHyperlink href="https://www.suws.org.uk/" target="_blank">
-                  https://www.suws.org.uk/
+                  https://www.facebook.com/UoSSoapbox/
                 </TippyHyperlink>
               </TippyPair>
             </TippyContent>
@@ -165,4 +146,4 @@ function SUWS() {
   );
 }
 
-export default SUWS;
+export default SoapboxRacers;
