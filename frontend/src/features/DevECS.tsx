@@ -1,12 +1,18 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import Icon from "@mdi/react";
+import {
+  mdiMessageVideo,
+  mdiAccountPlus,
+  mdiAccountGroup,
+  mdiArrowLeftThick,
+} from "@mdi/js";
 
 const IFrame = styled.iframe`
   border-radius: 1%;
-  max-height: 75vh;
-  max-width: 46.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   margin-right: 100px;
+  margin-left: 40px;
 `;
 
 const fadeIn = keyframes`
@@ -14,29 +20,134 @@ const fadeIn = keyframes`
 
 const CenteredPanel = styled.div`
   display: flex;
-  padding: 2vh 2vw;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  padding: 2em 2em;
 
   background-color: #292929;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 2%;
+  border-radius: 1em;
 
   -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  overflow-y: scroll;
+`;
+
+const Wrapper = styled.div`
+  flex: 70%;
+
+  display: flex;
+  flex-direction: column;
+`;
+
+const Header = styled.div`
+  display: flex;
+  flex: 0 0 10%;
+  width: 90%;
+
+  align-self: end;
+`;
+
+const NavBar = styled.nav`
+  display: flex;
+  align-items: center;
+  margin-left: 3.5rem;
+
+  & > a {
+    font-size: 24pt;
+    font-weight: 500;
+
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 5px white;
+
+    &:last-child {
+      color: grey;
+      text-decoration: none;
+      border-bottom: none;
+
+      margin-left: 2rem;
+    }
+  }
+`;
+
+const Presentation = styled.div`
+  align-self: end;
+  margin-right: 1rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
+`;
+
+const Sidebar = styled.div`
+  flex: 1;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+
+  & > div {
+    margin: 1.5rem 0rem;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
+`;
+
+const Circle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+
+  background-color: #363636;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+
+  cursor: pointer;
+  &:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
 `;
 
 function DevECS() {
   return (
     <CenteredPanel>
-      <IFrame
-        src="https://docs.google.com/presentation/d/e/2PACX-1vQTThN1xN66KghPWPSCVZzVmJ8sQmafWiUXzbcEDIwteQRy1E9mh-CpnH6dsM9IZA/embed?start=false&loop=false&delayms=5000"
-        frameBorder="0"
-        width="961"
-        height="750"
-        allowFullScreen={true}
-      ></IFrame>
-      <div>yo yo yo</div>
+      <Wrapper>
+        <Header>
+          <Circle>
+            <Icon path={mdiArrowLeftThick} size={1} />
+          </Circle>
+          <NavBar>
+            <a href="">Presentation</a>
+            <a href="">{"Q&A"}</a>
+          </NavBar>
+        </Header>
+        <Presentation>
+          <IFrame
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQTThN1xN66KghPWPSCVZzVmJ8sQmafWiUXzbcEDIwteQRy1E9mh-CpnH6dsM9IZA/embed?start=false&loop=false&delayms=5000"
+            frameBorder="0"
+            width="800"
+            height="629"
+            allowFullScreen={true}
+          ></IFrame>
+        </Presentation>
+      </Wrapper>
+      <Sidebar>
+        <Circle>
+          <Icon path={mdiMessageVideo} size={1} />
+        </Circle>
+        <Circle>
+          <Icon path={mdiAccountPlus} size={1} />
+        </Circle>
+        <Circle>
+          <Icon path={mdiAccountGroup} size={1} />
+        </Circle>
+      </Sidebar>
     </CenteredPanel>
   );
 }

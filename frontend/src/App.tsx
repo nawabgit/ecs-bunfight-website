@@ -51,7 +51,7 @@ const WelcomeContainer = styled(AppContainer)`
 
 const SocietyContainer = styled(AppContainer)`
   justify-content: center;
-  padding: 9vh 7vw;
+  padding: 6vh 4vw;
 `;
 
 const SelectedPanel = styled(BasePanel)`
