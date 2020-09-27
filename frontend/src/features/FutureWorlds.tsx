@@ -55,7 +55,7 @@ function FutureWorlds() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             width="800"
-            height="600"
+            height="629"
             allowFullScreen={true}
           ></IFrame>
         </Presentation>

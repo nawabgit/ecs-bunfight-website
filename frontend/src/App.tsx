@@ -7,6 +7,7 @@ import Hackasoton from "./features/Hackasoton";
 import DevECS from "./features/DevECS";
 import FutureWorlds from "./features/FutureWorlds";
 import SUWS from "./features/SUWS";
+import Robosoc from "./features/Robosoc";
 
 const AppContainer = styled.div`
   display: flex;
@@ -51,6 +52,11 @@ function App() {
       <Route path="/wireless-society-suws">
         <SocietyContainer>
           <SUWS />
+        </SocietyContainer>
+      </Route>
+      <Route path="/robosoc">
+        <SocietyContainer>
+          <Robosoc />
         </SocietyContainer>
       </Route>
     </Switch>
