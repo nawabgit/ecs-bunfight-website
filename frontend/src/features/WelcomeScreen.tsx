@@ -44,8 +44,8 @@ const WelcomePanel = styled(BasePanel)`
   padding: 2% 2%;
 `;
 
-const CenteredText = styled.div`
-  text-align: center;
+const JustifiedText = styled.div`
+  text-align: justify;
   font-size: 1vw;
 `;
 
@@ -79,7 +79,9 @@ const Card = styled(Link)`
   }
 `;
 
-const CardText = styled(CenteredText)`
+const CardText = styled.div`
+  text-align: center;
+  font-size: 1vw;
   padding-top: 5%;
   min-height: 2em;
 `;
@@ -232,11 +234,11 @@ function WelcomeScreen() {
       <WelcomePanel>
         <WelcomeTitle>ECS Expo 2020</WelcomeTitle>
         <WelcomeDivider />
-        <CenteredText>
+        <JustifiedText>
           Welcome to the virtual ECS Expo 2020. The panel on the left contains
           all of the ECS-supported societies. Click on a society to view
           resources and links. Drop-in sessions through zoom are available.
-        </CenteredText>
+        </JustifiedText>
       </WelcomePanel>
     </>
   );
