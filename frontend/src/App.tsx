@@ -12,6 +12,7 @@ import SoapboxRacers from "./features/SoapboxRacers";
 import SUCSS from "./features/SUCSS";
 import SUSF from "./features/SUSF";
 import SRO from "./features/SRO";
+import ECSEmpower from "./features/ECSEmpower";
 
 const AppContainer = styled.div`
   display: flex;
@@ -81,6 +82,11 @@ function App() {
       <Route path="/robotics-outreach-sro">
         <SocietyContainer>
           <SRO />
+        </SocietyContainer>
+      </Route>
+      <Route path="/ecs-empower">
+        <SocietyContainer>
+          <ECSEmpower />
         </SocietyContainer>
       </Route>
       <Redirect to="/" />
