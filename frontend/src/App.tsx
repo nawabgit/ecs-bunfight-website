@@ -6,6 +6,7 @@ import WelcomeScreen from "./features/WelcomeScreen";
 import Hackasoton from "./features/Hackasoton";
 import DevECS from "./features/DevECS";
 import FutureWorlds from "./features/FutureWorlds";
+import SUWS from "./features/SUWS";
 
 const AppContainer = styled.div`
   display: flex;
@@ -32,7 +33,6 @@ function App() {
           <WelcomeScreen />
         </WelcomeContainer>
       </Route>
-
       <Route path="/hackasoton">
         <SocietyContainer>
           <Hackasoton />
@@ -48,7 +48,11 @@ function App() {
           <FutureWorlds />
         </SocietyContainer>
       </Route>
-      <Redirect to="/" />
+      <Route path="/wireless-society-suws">
+        <SocietyContainer>
+          <SUWS />
+        </SocietyContainer>
+      </Route>
     </Switch>
   );
 }
