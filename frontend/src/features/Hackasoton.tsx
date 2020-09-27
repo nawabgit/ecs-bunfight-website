@@ -12,7 +12,7 @@ import {
   mdiMapMarker,
   mdiFacebookMessenger,
 } from "@mdi/js";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
 
 import "tippy.js/dist/tippy.css";
 import {
@@ -45,18 +45,26 @@ function DevECS() {
             </Circle>
           </Link>
           <NavBar>
-            <a href="">Presentation</a>
-            <a href="">{"Q&A"}</a>
+            <NavLink to="/hackasoton/presentation">Presentation</NavLink>
+            <NavLink to="/hackasoton/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
-          <IFrame
-            src="https://docs.google.com/presentation/d/e/2PACX-1vTOEMw1Q3m0QLLXn5psD30LfHHu9YX9MFBe7McieIjiBTblrmXMuG-HVSdhgHc9RtA8wblSfSYSunzK/embed?start=false&loop=false&delayms=5000"
-            frameBorder="0"
-            width="800"
-            height="629"
-            allowFullScreen={true}
-          ></IFrame>
+          <Switch>
+            <Route path="/hackasoton/presentation">
+              <IFrame
+                src="https://docs.google.com/presentation/d/e/2PACX-1vTOEMw1Q3m0QLLXn5psD30LfHHu9YX9MFBe7McieIjiBTblrmXMuG-HVSdhgHc9RtA8wblSfSYSunzK/embed?start=false&loop=false&delayms=5000"
+                frameBorder="0"
+                width="800"
+                height="629"
+                allowFullScreen={true}
+              ></IFrame>
+            </Route>
+            <Route path="/hackasoton/qna">
+              <div>:(</div>
+            </Route>
+            <Redirect to="/hackasoton/presentation" />
+          </Switch>
         </Presentation>
       </Wrapper>
       <Sidebar>

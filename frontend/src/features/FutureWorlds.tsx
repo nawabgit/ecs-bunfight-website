@@ -5,14 +5,13 @@ import {
   mdiAccountPlus,
   mdiAccountGroup,
   mdiArrowLeftThick,
-  mdiAt,
   mdiWeb,
   mdiFacebook,
   mdiTwitter,
   mdiLinkedin,
   mdiInstagram,
 } from "@mdi/js";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
 
 import {
@@ -45,19 +44,27 @@ function FutureWorlds() {
             </Circle>
           </Link>
           <NavBar>
-            <a href="">Presentation</a>
-            <a href="">{"Q&A"}</a>
+            <NavLink to="/future-worlds/video">Video</NavLink>
+            <NavLink to="/future-worlds/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
-          <IFrame
-            src="https://www.youtube.com/embed/zcdeRQ-oKzU"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            width="800"
-            height="629"
-            allowFullScreen={true}
-          ></IFrame>
+          <Switch>
+            <Route path="/future-worlds/video">
+              <IFrame
+                src="https://www.youtube.com/embed/zcdeRQ-oKzU"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                width="800"
+                height="629"
+                allowFullScreen={true}
+              ></IFrame>
+            </Route>
+            <Route path="/future-worlds/qna">
+              <div>:(</div>
+            </Route>
+            <Redirect to="/future-worlds/video" />
+          </Switch>
         </Presentation>
       </Wrapper>
       <Sidebar>

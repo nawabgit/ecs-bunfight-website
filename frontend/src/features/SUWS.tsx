@@ -12,7 +12,7 @@ import {
   mdiMapMarker,
   mdiTwitter,
 } from "@mdi/js";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
 
 import "tippy.js/dist/tippy.css";
 import {
@@ -45,18 +45,28 @@ function SUWS() {
             </Circle>
           </Link>
           <NavBar>
-            <a href="">Presentation</a>
-            <a href="">{"Q&A"}</a>
+            <NavLink to="/wireless-society-suws/presentation">
+              Presentation
+            </NavLink>
+            <NavLink to="/wireless-society-suws/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
-          <IFrame
-            src="https://docs.google.com/presentation/d/e/2PACX-1vQMck2jL6HG-3wq5K1C7IHW2qpqFXbYqyhllKG3P5C3f8AWVHeq6Y5zS8vul68mEw/embed?start=false&loop=false&delayms=3000"
-            frameBorder="0"
-            width="800"
-            height="629"
-            allowFullScreen={true}
-          ></IFrame>
+          <Switch>
+            <Route path="/wireless-society-suws/presentation">
+              <IFrame
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQMck2jL6HG-3wq5K1C7IHW2qpqFXbYqyhllKG3P5C3f8AWVHeq6Y5zS8vul68mEw/embed?start=false&loop=false&delayms=3000"
+                frameBorder="0"
+                width="800"
+                height="629"
+                allowFullScreen={true}
+              ></IFrame>
+            </Route>
+            <Route path="/wireless-society-suws/qna">
+              <div>:(</div>
+            </Route>
+            <Redirect to="/wireless-society-suws/presentation" />
+          </Switch>
         </Presentation>
       </Wrapper>
       <Sidebar>

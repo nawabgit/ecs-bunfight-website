@@ -9,7 +9,7 @@ import {
   mdiWeb,
   mdiFacebook,
 } from "@mdi/js";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
 
 import {
@@ -42,18 +42,26 @@ function DevECS() {
             </Circle>
           </Link>
           <NavBar>
-            <a href="">Presentation</a>
-            <a href="">{"Q&A"}</a>
+            <NavLink to="/devecs/presentation">Presentation</NavLink>
+            <NavLink to="/devecs/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
-          <IFrame
-            src="https://docs.google.com/presentation/d/e/2PACX-1vQTThN1xN66KghPWPSCVZzVmJ8sQmafWiUXzbcEDIwteQRy1E9mh-CpnH6dsM9IZA/embed?start=false&loop=false&delayms=5000"
-            frameBorder="0"
-            width="800"
-            height="629"
-            allowFullScreen={true}
-          ></IFrame>
+          <Switch>
+            <Route path="/devecs/presentation">
+              <IFrame
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQTThN1xN66KghPWPSCVZzVmJ8sQmafWiUXzbcEDIwteQRy1E9mh-CpnH6dsM9IZA/embed?start=false&loop=false&delayms=5000"
+                frameBorder="0"
+                width="800"
+                height="629"
+                allowFullScreen={true}
+              ></IFrame>
+            </Route>
+            <Route path="/devecs/qna">
+              <div>:(</div>
+            </Route>
+            <Redirect to="/devecs/presentation" />
+          </Switch>
         </Presentation>
       </Wrapper>
       <Sidebar>
