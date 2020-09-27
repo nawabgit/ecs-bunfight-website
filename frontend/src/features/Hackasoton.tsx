@@ -5,7 +5,6 @@ import {
   mdiAccountPlus,
   mdiAccountGroup,
   mdiArrowLeftThick,
-  mdiAt,
   mdiWeb,
   mdiFacebook,
   mdiCalendar,
@@ -13,6 +12,8 @@ import {
   mdiMapMarker,
   mdiFacebookMessenger,
 } from "@mdi/js";
+import { Link } from "react-router-dom";
+
 import "tippy.js/dist/tippy.css";
 import {
   StyledTippy,
@@ -38,9 +39,11 @@ function DevECS() {
     <CenteredPanel>
       <Wrapper>
         <Header>
-          <Circle>
-            <Icon path={mdiArrowLeftThick} size={1} />
-          </Circle>
+          <Link to="/">
+            <Circle>
+              <Icon path={mdiArrowLeftThick} size={1} />
+            </Circle>
+          </Link>
           <NavBar>
             <a href="">Presentation</a>
             <a href="">{"Q&A"}</a>

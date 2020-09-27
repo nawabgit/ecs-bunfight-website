@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { Switch, Route, Redirect } from "react-router-dom";
+
 import WelcomeScreen from "./features/WelcomeScreen";
 import Hackasoton from "./features/Hackasoton";
 import DevECS from "./features/DevECS";
@@ -22,27 +24,26 @@ const SocietyContainer = styled(AppContainer)`
 `;
 
 function App() {
-  const [selectedSoc, setSelectedSoc] = useState("");
-
   return (
-    <>
-      {!selectedSoc && (
+    <Switch>
+      <Route exact path="/">
         <WelcomeContainer>
-          <WelcomeScreen setSelectedSoc={setSelectedSoc} />
+          <WelcomeScreen />
         </WelcomeContainer>
-      )}
+      </Route>
 
-      {selectedSoc === "Hackasoton" && (
+      <Route path="/hackasoton">
         <SocietyContainer>
           <Hackasoton />
         </SocietyContainer>
-      )}
-      {selectedSoc === "DevECS" && (
+      </Route>
+      <Route path="/devecs">
         <SocietyContainer>
           <DevECS />
         </SocietyContainer>
-      )}
-    </>
+      </Route>
+      <Redirect to="/" />
+    </Switch>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as ECSSLogo } from "../images/ecss-logo.svg";
 import { ReactComponent as FutureWorldsLogo } from "../images/future-worlds-logo.svg";
@@ -48,11 +49,14 @@ const CenteredText = styled.div`
   font-size: 1vw;
 `;
 
-const Card = styled.div`
+const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+
+  text-decoration: none;
+  color: white;
 
   background-color: #3e3e3e;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -93,11 +97,7 @@ const WelcomeDivider = styled.div`
   margin-bottom: 5%;
 `;
 
-interface WelcomeScreen {
-  setSelectedSoc: React.Dispatch<React.SetStateAction<string>>;
-}
-
-function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
+function WelcomeScreen() {
   return (
     <>
       <SocietyPanel>
@@ -109,7 +109,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <ECSSLogo x="11" y="11" width={"80%"} height={"80%"} />
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Hackasoton"
@@ -118,7 +117,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="DevECS"
@@ -127,7 +125,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Future Worlds"
@@ -137,7 +134,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <FutureWorldsLogo x="22" y="20" width={"60%"} height={"60%"} />
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Wireless Society (SUWS)"
@@ -147,7 +143,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <SUWSLogo x="20" y="22" width={"60%"} height={"60%"} />
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="RoboSoc"
@@ -157,7 +152,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <RoboSocLogo x="21" y="16" width={"60%"} height={"60%"} />
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Toastrack"
@@ -166,7 +160,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Soapbox Racers"
@@ -175,7 +168,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Cyber Security Society (SUCSS)"
@@ -184,7 +176,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Spaceflight Society (SUSF)"
@@ -194,7 +185,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <SUSFLogo x="20" y="20" width={"60%"} height={"60%"} />
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="Robotics Outreach (SRO)"
@@ -203,7 +193,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="ECSS FC"
@@ -212,7 +201,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="ECS Empower"
@@ -222,7 +210,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <EmpowerLogo x="17" y="15" width={"65%"} height={"65%"} />
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="AISoc (USAIS)"
@@ -231,7 +218,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <circle cx="50" cy="50" r="40" fill="white"></circle>
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
         <SocietyCard
           name="MedTech"
@@ -241,7 +227,6 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
               <MedTechLogo x="18" y="17" width={"65%"} height={"65%"} />
             </svg>
           }
-          setSelectedSoc={setSelectedSoc}
         />
       </SocietyPanel>
       <WelcomePanel>
@@ -257,9 +242,9 @@ function WelcomeScreen({ setSelectedSoc }: WelcomeScreen) {
   );
 }
 
-function SocietyCard({ name, logo, setSelectedSoc }) {
+function SocietyCard({ name, logo }) {
   return (
-    <Card onClick={() => setSelectedSoc(name)}>
+    <Card to={"/" + name.replace(/\s+/g, "-").toLowerCase()}>
       {logo}
       <CardText>{name}</CardText>
     </Card>

@@ -93,6 +93,7 @@ export const Circle = styled.div`
   border-radius: 35px;
 
   background-color: #363636;
+  color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 
   cursor: pointer;
