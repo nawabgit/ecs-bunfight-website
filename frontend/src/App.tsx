@@ -13,6 +13,7 @@ import SUCSS from "./features/SUCSS";
 import SUSF from "./features/SUSF";
 import SRO from "./features/SRO";
 import ECSEmpower from "./features/ECSEmpower";
+import USAIS from "./features/USAIS";
 
 const AppContainer = styled.div`
   display: flex;
@@ -87,6 +88,11 @@ function App() {
       <Route path="/ecs-empower">
         <SocietyContainer>
           <ECSEmpower />
+        </SocietyContainer>
+      </Route>
+      <Route path="/aisoc-usais">
+        <SocietyContainer>
+          <USAIS />
         </SocietyContainer>
       </Route>
       <Redirect to="/" />
