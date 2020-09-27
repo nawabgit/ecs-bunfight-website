@@ -244,7 +244,9 @@ function WelcomeScreen() {
 
 function SocietyCard({ name, logo }) {
   return (
-    <Card to={"/" + name.replace(/\s+/g, "-").toLowerCase()}>
+    <Card
+      to={"/" + name.replace(/\s+/g, "-").replace(/[()]/g, "").toLowerCase()}
+    >
       {logo}
       <CardText>{name}</CardText>
     </Card>
