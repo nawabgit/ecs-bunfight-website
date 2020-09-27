@@ -5,13 +5,16 @@ import {
   mdiAccountPlus,
   mdiAccountGroup,
   mdiArrowLeftThick,
-  mdiAt,
   mdiWeb,
   mdiFacebook,
+  mdiCalendar,
+  mdiClockTimeFour,
+  mdiMapMarker,
+  mdiFacebookMessenger,
 } from "@mdi/js";
 import { Link } from "react-router-dom";
-import "tippy.js/dist/tippy.css";
 
+import "tippy.js/dist/tippy.css";
 import {
   StyledTippy,
   TippyContent,
@@ -48,7 +51,7 @@ function DevECS() {
         </Header>
         <Presentation>
           <IFrame
-            src="https://docs.google.com/presentation/d/e/2PACX-1vQTThN1xN66KghPWPSCVZzVmJ8sQmafWiUXzbcEDIwteQRy1E9mh-CpnH6dsM9IZA/embed?start=false&loop=false&delayms=5000"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTOEMw1Q3m0QLLXn5psD30LfHHu9YX9MFBe7McieIjiBTblrmXMuG-HVSdhgHc9RtA8wblSfSYSunzK/embed?start=false&loop=false&delayms=5000"
             frameBorder="0"
             width="800"
             height="629"
@@ -61,10 +64,23 @@ function DevECS() {
           content={
             <TippyContent>
               <TippyHeader>Meet-and-greet</TippyHeader>
-              <p>
-                This society is <strong>not</strong> hosting a meet-and-greet.
-                Check their social media instead!
-              </p>
+              <TippyPair>
+                <Icon path={mdiCalendar} size={0.7} />
+                <span>Tuesday 29th September</span>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiClockTimeFour} size={0.7} />
+                <span>14:00 - 15:00</span>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiMapMarker} size={0.7} />
+                <TippyHyperlink
+                  href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTU2ODdmMDEtOTVmNy00N2FkLWE1ZDQtZTY0YzYxYjVkMzAy%40thread.v2/0?context=%7b%22Tid%22%3a%224a5378f9-29f4-4d3e-be89-669d03ada9d8%22%2c%22Oid%22%3a%22d3660cdf-e7e8-464c-80b8-4c0fc1153283%22%7d"
+                  target="_blank"
+                >
+                  Microsoft Teams
+                </TippyHyperlink>
+              </TippyPair>
             </TippyContent>
           }
           placement="left-start"
@@ -80,11 +96,11 @@ function DevECS() {
             <TippyContent>
               <TippyHeader>Sign up</TippyHeader>
               <p>
-                Sign up to receive work opportunities with DevECS by clicking
-                the button below!
+                Sign up to the Hackasoton society by clicking the button below
+                and joining the mailing list!
               </p>
               <TippyButton
-                href="https://tinyurl.com/devecs2020"
+                href="https://hackasoton.us7.list-manage.com/subscribe/post?u=959a42d567d3f16d123db561e&amp;id=83ab3277fa"
                 target="_blank"
               >
                 Sign Up
@@ -104,30 +120,30 @@ function DevECS() {
             <TippyContent>
               <TippyHeader>Social platforms</TippyHeader>
               <TippyPair>
-                <Icon path={mdiAt} size={0.7} />
+                <Icon path={mdiFacebook} size={0.7} />
                 <TippyHyperlink
-                  href="mailto:devecs@soton.ac.uk"
+                  href="http://facebook.com/HackaSoton/"
                   target="_blank"
                 >
-                  devecs@soton.ac.uk
+                  http://facebook.com/HackaSoton/
+                </TippyHyperlink>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiFacebookMessenger} size={0.7} />
+                <TippyHyperlink
+                  href="https://www.facebook.com/groups/HackaSoton/"
+                  target="_blank"
+                >
+                  http://www.facebook.com/groups/HackaSoton
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiWeb} size={0.7} />
                 <TippyHyperlink
-                  href="https://devecs.ecs.soton.ac.uk/student/"
+                  href="http://hackthesouth.co.uk/"
                   target="_blank"
                 >
-                  https://devecs.ecs.soton.ac.uk/student/
-                </TippyHyperlink>
-              </TippyPair>
-              <TippyPair>
-                <Icon path={mdiFacebook} size={0.7} />
-                <TippyHyperlink
-                  href="https://www.facebook.com/devecs/"
-                  target="_blank"
-                >
-                  https://www.facebook.com/devecs/
+                  http://hackthesouth.co.uk/
                 </TippyHyperlink>
               </TippyPair>
             </TippyContent>
