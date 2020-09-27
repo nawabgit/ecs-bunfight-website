@@ -34,7 +34,7 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
   display: flex;
   flex: 0 0 10%;
-  width: 90%;
+  width: 100%;
 
   align-self: end;
 `;
