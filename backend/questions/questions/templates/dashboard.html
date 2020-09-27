@@ -1,0 +1,24 @@
+<a href='{% url "logout-view" %}'>Logout</a>
+<br/>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" name="addanswer" value="Add Answer" />
+</form>
+<br/>
+Welcome,
+{{userdetail.username}}
+<br/>
+Asked Questions.
+<br/>
+{% for question, answers in qandas %}
+    <b>{{question.id}}. {{question.title}} - {{question.user}}</b>
+    <br/>
+    Answers.
+    {% for answer in answers %}
+        <li>{{answer.answer_text}}</li>
+    {% endfor %}
+    <br/>
+{% endfor %}
