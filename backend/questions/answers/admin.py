@@ -9,8 +9,22 @@ class AnswerInline(admin.TabularInline):
 class QuestionsAdmin(admin.ModelAdmin):
 
     inlines = [AnswerInline]
-    class Meta:
-        model = Questions
+    exclude = ('user',)
+    
+    def get_queryset(self, request):
+        qs = super(QuestionsAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(user=request.user)
+
+    def save_model(self, request, instance, form, change):
+        user = request.user 
+        instance = form.save(commit=False)
+        if not change or not instance.user:
+            instance.user = user
+        instance.save()
+        form.save_m2m()
+        return instance
 
 
 class QuestionGroupsAdmin(admin.ModelAdmin):
