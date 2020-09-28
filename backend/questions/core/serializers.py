@@ -9,7 +9,7 @@ class AnswerSerializer(serializers.ModelSerializer):
 
 
 class QuestionSerializer(serializers.ModelSerializer):
-    answers = AnswerSerializer(read_only=True)
+    answer = AnswerSerializer(read_only=True)
     user = serializers.SerializerMethodField()
 
     def get_user(self, obj):
@@ -17,4 +17,4 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ('answers', 'user', 'title')
+        fields = ('answer', 'user', 'title')
