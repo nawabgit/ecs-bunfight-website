@@ -1,13 +1,13 @@
-from answers.models import Questions, Answers
+from answers.models import Question, Answer
 from rest_framework import viewsets
 from rest_framework import permissions
-from core.serializers import QuestionsSerializer
+from core.serializers import QuestionSerializer
 
 
 class QuestionViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows questions to be viewed or edited.
     """
-    queryset = Questions.objects.all()
-    serializer_class = QuestionsSerializer
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
     permission_classes = [permissions.IsAuthenticated]

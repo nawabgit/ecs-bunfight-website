@@ -1,18 +1,18 @@
 from django.contrib import admin
-from .models import Questions, Answers
+from .models import Question, Answer
 
 
 class AnswerInline(admin.TabularInline):
-    model = Answers
+    model = Answer
 
 
-class QuestionsAdmin(admin.ModelAdmin):
+class QuestionAdmin(admin.ModelAdmin):
 
     inlines = [AnswerInline]
     exclude = ('user', 'slug',)
     
     def get_queryset(self, request):
-        qs = super(QuestionsAdmin, self).get_queryset(request)
+        qs = super(QuestionAdmin, self).get_queryset(request)
         if request.user.is_superuser:
             return qs
         return qs.filter(user=request.user)
@@ -26,4 +26,4 @@ class QuestionsAdmin(admin.ModelAdmin):
         form.save_m2m()
         return instance
 
-admin.site.register(Questions, QuestionsAdmin)
+admin.site.register(Question, QuestionAdmin)

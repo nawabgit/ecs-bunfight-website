@@ -1,20 +1,20 @@
 from rest_framework import serializers
-from answers.models import Questions, Answers
+from answers.models import Question, Answer
 
 
-class AnswersSerializer(serializers.ModelSerializer):
+class AnswerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Answers
+        model = Answer
         fields = ('question', 'answer_text')
 
 
-class QuestionsSerializer(serializers.ModelSerializer):
-    answers = AnswersSerializer(read_only=True)
+class QuestionSerializer(serializers.ModelSerializer):
+    answers = AnswerSerializer(read_only=True)
     user = serializers.SerializerMethodField()
 
     def get_user(self, obj):
         return obj.user.username
 
     class Meta:
-        model = Questions
+        model = Question
         fields = ('answers', 'user', 'title')
