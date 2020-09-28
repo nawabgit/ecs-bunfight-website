@@ -14,6 +14,9 @@ import SUSF from "./features/SUSF";
 import SRO from "./features/SRO";
 import ECSEmpower from "./features/ECSEmpower";
 import USAIS from "./features/USAIS";
+import useSelector from "./common/hooks/useSelector";
+import useDispatch from "./common/hooks/useDispatch";
+import { doGetQuestions } from "./state/state";
 
 const AppContainer = styled.div`
   display: flex;
@@ -33,6 +36,15 @@ const SocietyContainer = styled(AppContainer)`
 `;
 
 function App() {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.questions);
+
+  console.log(state);
+
+  React.useEffect(() => {
+    dispatch(doGetQuestions());
+  }, []);
+
   return (
     <Switch>
       <Route exact path="/">

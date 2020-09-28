@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
+import { Provider } from "react-redux";
+import store from "./store";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import BuiltTitling from "./fonts/built-titling-sb.ttf";
@@ -40,10 +42,12 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <Router>
-      <App />
-    </Router>
+    <Provider store={store}>
+      <GlobalStyle />
+      <Router>
+        <App />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
