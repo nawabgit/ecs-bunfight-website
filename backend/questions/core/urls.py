@@ -15,13 +15,14 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
-from .views import LoginView, RegisterView, DashboardView, LogoutView, AddQuestionView
+from django.urls import include, path
+from rest_framework import routers
+from core import views
+
+router = routers.DefaultRouter()
+router.register(r'questions', views.QuestionViewSet)
 
 urlpatterns = [
-    path('login/', LoginView.as_view(), name='login-view'),
-    path('register/', RegisterView.as_view(), name='register-view'),
-    path('dashboard/', DashboardView.as_view(), name='dashboard-view'),
-    path('logout/', LogoutView.as_view(), name='logout-view'),
-    path('addquestion/', AddQuestionView.as_view(), name='addquestion-view'),
+    path('', include(router.urls)),
+    path('api/', include('rest_framework.urls', namespace='rest_framework'))
 ]

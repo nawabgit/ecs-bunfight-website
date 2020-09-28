@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Questions, Answers, QuestionGroups
+from .models import Questions, Answers
 
 
 class AnswerInline(admin.TabularInline):
@@ -9,7 +9,7 @@ class AnswerInline(admin.TabularInline):
 class QuestionsAdmin(admin.ModelAdmin):
 
     inlines = [AnswerInline]
-    exclude = ('user',)
+    exclude = ('user', 'slug',)
     
     def get_queryset(self, request):
         qs = super(QuestionsAdmin, self).get_queryset(request)
@@ -26,11 +26,4 @@ class QuestionsAdmin(admin.ModelAdmin):
         form.save_m2m()
         return instance
 
-
-class QuestionGroupsAdmin(admin.ModelAdmin):
-
-    class Meta:
-        QuestionGroups
-
 admin.site.register(Questions, QuestionsAdmin)
-admin.site.register(QuestionGroups, QuestionGroupsAdmin)
