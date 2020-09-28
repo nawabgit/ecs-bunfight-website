@@ -34,7 +34,7 @@ import {
   Sidebar,
 } from "../common/societyComponents";
 
-function DevECS() {
+function Hackasoton() {
   return (
     <CenteredPanel>
       <Wrapper>
@@ -169,4 +169,4 @@ function DevECS() {
   );
 }
 
-export default DevECS;
+export default Hackasoton;
