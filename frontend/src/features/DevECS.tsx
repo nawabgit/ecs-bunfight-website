@@ -29,6 +29,12 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  ChatboxWrapper,
+  QuestionWrapper,
+  QuestionHeader,
+  QuestionText,
+  ChatboxInput,
+  ChatboxButton,
 } from "../common/societyComponents";
 
 function DevECS() {
@@ -58,7 +64,84 @@ function DevECS() {
               ></IFrame>
             </Route>
             <Route path="/devecs/qna">
-              <div>:(</div>
+              <ChatboxWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+                <QuestionWrapper>
+                  <QuestionHeader>
+                    Do you have any advice for freshers?
+                  </QuestionHeader>
+                  <QuestionText>
+                    Our advice to freshers is to contact us at our email or
+                    something
+                  </QuestionText>
+                </QuestionWrapper>
+              </ChatboxWrapper>
+              <div style={{ display: "flex" }}>
+                <ChatboxInput placeholder="Type your question here..."></ChatboxInput>
+                <ChatboxButton>Submit</ChatboxButton>
+              </div>
             </Route>
             <Redirect to="/devecs/presentation" />
           </Switch>

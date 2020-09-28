@@ -72,6 +72,81 @@ export const Presentation = styled.div`
   margin-top: 1rem;
 `;
 
+export const ChatboxWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  background-color: #474747;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  height: 540px;
+  width: 800px;
+
+  overflow-y: scroll;
+
+  & > div {
+    margin: 0.5rem 0rem;
+  }
+`;
+
+export const ChatboxInput = styled.input`
+  background-color: #d1d1d1;
+  border-radius: 1em;
+
+  padding: 0rem 0.75rem;
+  font-size: 14pt;
+
+  border: none;
+
+  margin: 1.5rem 0rem;
+
+  height: 50px;
+  width: 80%;
+`;
+
+export const ChatboxButton = styled.button`
+  background-color: #474747;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14pt;
+  font-weight: 500;
+
+  border: none;
+
+  border-radius: 1em;
+  margin: 1.5rem 0rem;
+  width: 18%;
+  margin-left: 2%;
+
+  cursor: pointer;
+  &:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+`;
+
+export const QuestionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  background-color: #666666;
+
+  padding: 1rem 1rem;
+  border-radius: 1em;
+`;
+
+export const QuestionHeader = styled.h3`
+  margin 0rem 0rem 0.75rem;
+`;
+
+export const QuestionText = styled.span`
+  font-size: 11pt;
+`;
+
 export const Sidebar = styled.div`
   flex: 1;
   margin-top: 5rem;
