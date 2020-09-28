@@ -36,8 +36,11 @@ import {
   ChatboxInput,
   ChatboxButton,
 } from "../common/societyComponents";
+import useSelector from "../common/hooks/useSelector";
 
 function DevECS() {
+  const { pending, questions } = useSelector((state) => state.questions);
+
   return (
     <CenteredPanel>
       <Wrapper>
@@ -65,78 +68,17 @@ function DevECS() {
             </Route>
             <Route path="/devecs/qna">
               <ChatboxWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
-                <QuestionWrapper>
-                  <QuestionHeader>
-                    Do you have any advice for freshers?
-                  </QuestionHeader>
-                  <QuestionText>
-                    Our advice to freshers is to contact us at our email or
-                    something
-                  </QuestionText>
-                </QuestionWrapper>
+                {!pending &&
+                  questions &&
+                  questions.map(
+                    (e) =>
+                      e.answer && (
+                        <QuestionWrapper>
+                          <QuestionHeader>{e.title}</QuestionHeader>
+                          <QuestionText>{e.answer.answer_text}</QuestionText>
+                        </QuestionWrapper>
+                      )
+                  )}
               </ChatboxWrapper>
               <div style={{ display: "flex" }}>
                 <ChatboxInput placeholder="Type your question here..."></ChatboxInput>

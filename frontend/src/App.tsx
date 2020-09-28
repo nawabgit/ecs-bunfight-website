@@ -37,9 +37,6 @@ const SocietyContainer = styled(AppContainer)`
 
 function App() {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.questions);
-
-  console.log(state);
 
   React.useEffect(() => {
     dispatch(doGetQuestions());
