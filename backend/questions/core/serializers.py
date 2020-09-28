@@ -10,10 +10,6 @@ class AnswerSerializer(serializers.ModelSerializer):
 
 class QuestionSerializer(serializers.ModelSerializer):
     answer = AnswerSerializer(read_only=True)
-    user = serializers.SerializerMethodField()
-
-    def get_user(self, obj):
-        return obj.user.username
 
     class Meta:
         model = Question
