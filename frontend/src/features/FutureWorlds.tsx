@@ -10,6 +10,7 @@ import {
   mdiTwitter,
   mdiLinkedin,
   mdiInstagram,
+  mdiInformation,
 } from "@mdi/js";
 import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
@@ -162,12 +163,52 @@ function FutureWorlds() {
               </TippyPair>
             </TippyContent>
           }
-          placement="left-end"
+          placement="left"
           arrow={true}
           interactive={true}
         >
           <Circle>
-            <Icon path={mdiAccountGroup} size={1} />
+            <Icon path={mdiMessageVideo} size={1} />
+          </Circle>
+        </StyledTippy>
+        <StyledTippy
+          content={
+            <TippyContent>
+              <TippyHeader>Extra Information</TippyHeader>
+              <p>
+                Be inspired by those who made it happen whilst studying at
+                university. Join Future Worlds, the University of Southampton’s
+                on-campus startup accelerator, this Welcome Week on 1st October
+                for our live online broadcast and learn how you can get involved
+                in the exciting startup community here at the University.
+              </p>
+              <p>
+                By joining this event you will have the opportunity to find out
+                how you can get £500 to help explore your own startup idea. This
+                has been made possible from the support of Santander and the
+                Student Enterprise team here at the University.
+              </p>
+              <p>
+                Future Worlds hosts inspiring startup events, skills workshops
+                and investor pitching opportunities and accelerates ideas
+                through one-to-one support and its network of mentors and
+                millionaire investors. We exist to help aspiring University
+                entrepreneurs change the world with their ideas.
+              </p>
+              <p>
+                Register for free today:{" "}
+                <TippyHyperlink href="https://futureworlds.com/welcome/">
+                  https://futureworlds.com/welcome/
+                </TippyHyperlink>
+              </p>
+            </TippyContent>
+          }
+          placement="left"
+          arrow={true}
+          interactive={true}
+        >
+          <Circle>
+            <Icon path={mdiInformation} size={1} />
           </Circle>
         </StyledTippy>
       </Sidebar>

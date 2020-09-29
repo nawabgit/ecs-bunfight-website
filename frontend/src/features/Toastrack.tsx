@@ -7,14 +7,14 @@ import {
   mdiArrowLeftThick,
   mdiWeb,
   mdiFacebook,
-  mdiCalendar,
-  mdiClockTimeFour,
-  mdiMapMarker,
   mdiFacebookMessenger,
+  mdiDiscord,
+  mdiInstagram,
+  mdiAt,
 } from "@mdi/js";
 import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
-
 import "tippy.js/dist/tippy.css";
+
 import {
   StyledTippy,
   TippyContent,
@@ -35,7 +35,7 @@ import {
   Chatbox,
 } from "../common/societyComponents";
 
-function Hackasoton() {
+function Toastrack() {
   return (
     <CenteredPanel>
       <Wrapper>
@@ -46,25 +46,25 @@ function Hackasoton() {
             </Circle>
           </Link>
           <NavBar>
-            <NavLink to="/hackasoton/presentation">Presentation</NavLink>
-            <NavLink to="/hackasoton/qna">{"Q&A"}</NavLink>
+            <NavLink to="/toastrack/presentation">Presentation</NavLink>
+            <NavLink to="/toastrack/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
           <Switch>
-            <Route path="/hackasoton/presentation">
+            <Route path="/toastrack/presentation">
               <IFrame
-                src="https://docs.google.com/presentation/d/e/2PACX-1vTOEMw1Q3m0QLLXn5psD30LfHHu9YX9MFBe7McieIjiBTblrmXMuG-HVSdhgHc9RtA8wblSfSYSunzK/embed?start=false&loop=false&delayms=5000"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vT9vEKq3W0SL3Jmo8YNmbVN0igzOxQGxH3CXvLR1KKFsTJDkgAy5o2jasjB7T0bSV-y6PHKiraYZDsh/embed?start=false&loop=false&delayms=3000"
                 frameBorder="0"
                 width="800"
                 height="629"
                 allowFullScreen={true}
               ></IFrame>
             </Route>
-            <Route path="/hackasoton/qna">
-              <Chatbox user={"Hackasoton"} />
+            <Route path="/toastrack/qna">
+              <Chatbox user={"Toastrack"} />
             </Route>
-            <Redirect to="/hackasoton/presentation" />
+            <Redirect to="/toastrack/presentation" />
           </Switch>
         </Presentation>
       </Wrapper>
@@ -73,23 +73,10 @@ function Hackasoton() {
           content={
             <TippyContent>
               <TippyHeader>Meet-and-greet</TippyHeader>
-              <TippyPair>
-                <Icon path={mdiCalendar} size={0.7} />
-                <span>Tuesday 29th September</span>
-              </TippyPair>
-              <TippyPair>
-                <Icon path={mdiClockTimeFour} size={0.7} />
-                <span>14:00 - 15:00</span>
-              </TippyPair>
-              <TippyPair>
-                <Icon path={mdiMapMarker} size={0.7} />
-                <TippyHyperlink
-                  href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTU2ODdmMDEtOTVmNy00N2FkLWE1ZDQtZTY0YzYxYjVkMzAy%40thread.v2/0?context=%7b%22Tid%22%3a%224a5378f9-29f4-4d3e-be89-669d03ada9d8%22%2c%22Oid%22%3a%22d3660cdf-e7e8-464c-80b8-4c0fc1153283%22%7d"
-                  target="_blank"
-                >
-                  Microsoft Teams
-                </TippyHyperlink>
-              </TippyPair>
+              <p>
+                This society is <strong>not</strong> hosting a meet-and-greet.
+                Check their social media instead!
+              </p>
             </TippyContent>
           }
           placement="left-start"
@@ -105,11 +92,11 @@ function Hackasoton() {
             <TippyContent>
               <TippyHeader>Sign up</TippyHeader>
               <p>
-                Sign up to Hackasoton by clicking the button below and joining
-                the mailing list!
+                Sign up to toastrack via liking their Facebook page by clicking
+                the button below!
               </p>
               <TippyButton
-                href="https://hackasoton.us7.list-manage.com/subscribe/post?u=959a42d567d3f16d123db561e&amp;id=83ab3277fa"
+                href="https://www.facebook.com/toastrackbus"
                 target="_blank"
               >
                 Sign Up
@@ -129,30 +116,36 @@ function Hackasoton() {
             <TippyContent>
               <TippyHeader>Social platforms</TippyHeader>
               <TippyPair>
-                <Icon path={mdiFacebook} size={0.7} />
+                <Icon path={mdiAt} size={0.7} />
                 <TippyHyperlink
-                  href="http://www.facebook.com/HackaSoton/"
+                  href="mailto:toastrack@soton.ac.uk"
                   target="_blank"
                 >
-                  http://www.facebook.com/HackaSoton/
+                  toastrack@soton.ac.uk
+                </TippyHyperlink>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiFacebook} size={0.7} />
+                <TippyHyperlink
+                  href="https://www.facebook.com/toastrackbus"
+                  target="_blank"
+                >
+                  https://www.facebook.com/toastrackbus/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiFacebookMessenger} size={0.7} />
                 <TippyHyperlink
-                  href="https://www.facebook.com/groups/HackaSoton/"
+                  href="https://www.facebook.com/groups/toastrack"
                   target="_blank"
                 >
-                  http://www.facebook.com/groups/HackaSoton
+                  https://www.facebook.com/groups/toastrack/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
-                <Icon path={mdiWeb} size={0.7} />
-                <TippyHyperlink
-                  href="http://www.hackthesouth.co.uk/"
-                  target="_blank"
-                >
-                  http://www.hackthesouth.co.uk/
+                <Icon path={mdiDiscord} size={0.7} />
+                <TippyHyperlink href="discord.gg/CzuEwZq/" target="_blank">
+                  discord.gg/CzuEwZq/
                 </TippyHyperlink>
               </TippyPair>
             </TippyContent>
@@ -170,4 +163,4 @@ function Hackasoton() {
   );
 }
 
-export default Hackasoton;
+export default Toastrack;

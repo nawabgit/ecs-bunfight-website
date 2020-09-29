@@ -17,6 +17,9 @@ import USAIS from "./features/USAIS";
 import useDispatch from "./common/hooks/useDispatch";
 import { doGetQuestions } from "./state/state";
 import ECSS from "./features/ECSS";
+import Toastrack from "./features/Toastrack";
+import ECSSFC from "./features/ECSSFC";
+import MedTech from "./features/MedTech";
 
 const AppContainer = styled.div`
   display: flex;
@@ -79,6 +82,11 @@ function App() {
           <Robosoc />
         </SocietyContainer>
       </Route>
+      <Route path="/toastrack">
+        <SocietyContainer>
+          <Toastrack />
+        </SocietyContainer>
+      </Route>
       <Route path="/soapbox-racers">
         <SocietyContainer>
           <SoapboxRacers />
@@ -99,6 +107,11 @@ function App() {
           <SRO />
         </SocietyContainer>
       </Route>
+      <Route path="/ecss-fc">
+        <SocietyContainer>
+          <ECSSFC />
+        </SocietyContainer>
+      </Route>
       <Route path="/ecs-empower">
         <SocietyContainer>
           <ECSEmpower />
@@ -107,6 +120,11 @@ function App() {
       <Route path="/aisoc-usais">
         <SocietyContainer>
           <USAIS />
+        </SocietyContainer>
+      </Route>
+      <Route path="/medtech">
+        <SocietyContainer>
+          <MedTech />
         </SocietyContainer>
       </Route>
       <Redirect to="/" />

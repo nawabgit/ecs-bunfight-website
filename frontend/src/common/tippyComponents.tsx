@@ -9,6 +9,9 @@ export const StyledTippy = styled(Tippy)`
 export const TippyContent = styled.div`
   display: flex;
   flex-direction: column;
+
+  max-height: 600px;
+  overflow-y: scroll;
   padding: 0.5rem;
 `;
 
