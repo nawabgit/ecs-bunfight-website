@@ -1,5 +1,4 @@
 backend/questions/db.sqlite3
-backend/requirements.txt
 backend/questions/db.sqlite3
 backend/questions/answers/__pycache__/__init__.cpython-38.pyc
 backend/questions/answers/__pycache__/admin.cpython-38.pyc
