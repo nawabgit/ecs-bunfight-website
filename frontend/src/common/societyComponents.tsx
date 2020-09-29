@@ -201,6 +201,7 @@ export const Sidebar = styled.div`
   flex: 1;
   margin-top: 5rem;
   margin-bottom: 1rem;
+  margin-left: 1.5rem;
 
   & > div {
     margin: 1.5rem 0rem;
@@ -212,6 +213,7 @@ export const Sidebar = styled.div`
 
   @media screen and (max-width: 800px) {
     display: none;
+    margin-left: 0rem;
   }
 `;
 
