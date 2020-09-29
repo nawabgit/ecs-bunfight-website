@@ -132,8 +132,11 @@ function ECSS() {
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiDiscord} size={0.7} />
-                <TippyHyperlink href="discord.gg/sZpF58S" target="_blank">
-                  discord.gg/sZpF58S/
+                <TippyHyperlink
+                  href="https://discord.gg/sZpF58S"
+                  target="_blank"
+                >
+                  https://discord.gg/sZpF58S/
                 </TippyHyperlink>
               </TippyPair>
               <TippyPair>
@@ -202,8 +205,8 @@ function ECSS() {
           </TippyPair>
           <TippyPair>
             <Icon path={mdiDiscord} size={0.7} />
-            <TippyHyperlink href="discord.gg/sZpF58S" target="_blank">
-              discord.gg/sZpF58S/
+            <TippyHyperlink href="https://discord.gg/sZpF58S" target="_blank">
+              https://discord.gg/sZpF58S
             </TippyHyperlink>
           </TippyPair>
           <TippyPair>

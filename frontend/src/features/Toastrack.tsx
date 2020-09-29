@@ -145,8 +145,11 @@ function Toastrack() {
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiDiscord} size={0.7} />
-                <TippyHyperlink href="discord.gg/CzuEwZq/" target="_blank">
-                  discord.gg/CzuEwZq/
+                <TippyHyperlink
+                  href="https://discord.gg/CzuEwZq"
+                  target="_blank"
+                >
+                  https://discord.gg/CzuEwZq
                 </TippyHyperlink>
               </TippyPair>
             </TippyContent>
@@ -209,8 +212,8 @@ function Toastrack() {
           </TippyPair>
           <TippyPair>
             <Icon path={mdiDiscord} size={0.7} />
-            <TippyHyperlink href="discord.gg/CzuEwZq/" target="_blank">
-              discord.gg/CzuEwZq/
+            <TippyHyperlink href="https://discord.gg/CzuEwZq" target="_blank">
+              https://discord.gg/CzuEwZq
             </TippyHyperlink>
           </TippyPair>
         </TippyContent>

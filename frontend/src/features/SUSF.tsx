@@ -89,7 +89,7 @@ function SUSF() {
                 This society is <strong>not</strong> hosting a meet-and-greet.
                 Check out their{" "}
                 <TippyHyperlink
-                  href="https://sucss.org/discord/"
+                  href="https://discord.com/invite/c7QEUBb"
                   target="_blank"
                 >
                   Discord
@@ -184,7 +184,10 @@ function SUSF() {
           <p>
             This society is <strong>not</strong> hosting a meet-and-greet. Check
             out their{" "}
-            <TippyHyperlink href="https://sucss.org/discord/" target="_blank">
+            <TippyHyperlink
+              href="https://discord.com/invite/c7QEUBb"
+              target="_blank"
+            >
               Discord
             </TippyHyperlink>{" "}
             instead!
