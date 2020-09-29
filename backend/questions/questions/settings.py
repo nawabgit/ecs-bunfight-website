@@ -69,6 +69,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'questions.urls'
+CORS_ALLOW_ALL_ORIGINS =True
 
 TEMPLATES = [
     {
