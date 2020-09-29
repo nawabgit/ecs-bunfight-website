@@ -17,6 +17,7 @@ import USAIS from "./features/USAIS";
 import useDispatch from "./common/hooks/useDispatch";
 import { doGetQuestions } from "./state/state";
 import ECSS from "./features/ECSS";
+import Toastrack from "./features/Toastrack";
 
 const AppContainer = styled.div`
   display: flex;
@@ -77,6 +78,11 @@ function App() {
       <Route path="/robosoc">
         <SocietyContainer>
           <Robosoc />
+        </SocietyContainer>
+      </Route>
+      <Route path="/toastrack">
+        <SocietyContainer>
+          <Toastrack />
         </SocietyContainer>
       </Route>
       <Route path="/soapbox-racers">
