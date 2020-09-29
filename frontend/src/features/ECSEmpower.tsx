@@ -45,12 +45,23 @@ function ECSEmpower() {
             </Circle>
           </Link>
           <NavBar>
+            <NavLink to="/ecs-empower/video">Video</NavLink>
             <NavLink to="/ecs-empower/presentation">Presentation</NavLink>
             <NavLink to="/ecs-empower/qna">{"Q&A"}</NavLink>
           </NavBar>
         </Header>
         <Presentation>
           <Switch>
+            <Route path="/ecs-empower/video">
+              <IFrame
+                src="https://www.youtube.com/embed/O3SOKHyRp24"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                width="800"
+                height="629"
+                allowFullScreen={true}
+              ></IFrame>
+            </Route>
             <Route path="/ecs-empower/presentation">
               <IFrame
                 src="https://docs.google.com/presentation/d/e/2PACX-1vS06POJLibOZCHN0RSRfMyc2lq5oDRwdIiYH4gSnEbZkI2jTzCvHO0yy4aTqd3big/embed?start=false&loop=false&delayms=3000"
@@ -63,7 +74,7 @@ function ECSEmpower() {
             <Route path="/ecs-empower/qna">
               <Chatbox user={"ECSEmpower"} />
             </Route>
-            <Redirect to="/ecs-empower/presentation" />
+            <Redirect to="/ecs-empower/video" />
           </Switch>
         </Presentation>
       </Wrapper>
