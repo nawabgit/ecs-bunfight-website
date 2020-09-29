@@ -1,1 +1,1 @@
-web: gunicorn questions.wsgi
+web: gunicorn questions.questions.wsgi
