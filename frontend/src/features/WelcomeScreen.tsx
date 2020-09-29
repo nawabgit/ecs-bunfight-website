@@ -57,7 +57,7 @@ const WelcomePanel = styled(BasePanel)`
 
   flex: 3;
   overflow-y: auto;
-  margin-left: 1%;
+  margin-right: 1%;
   padding: 2% 2%;
 
   @media screen and (max-width: 800px) {
