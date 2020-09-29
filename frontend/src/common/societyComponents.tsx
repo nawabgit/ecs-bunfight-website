@@ -280,6 +280,7 @@ export function Chatbox({ user }: { user: number }) {
         <ChatboxInput
           value={inputState}
           onChange={(e) => setInputState(e.target.value)}
+          maxLength="254"
           placeholder="Type your question here..."
         ></ChatboxInput>
         <ChatboxButton
