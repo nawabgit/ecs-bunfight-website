@@ -14,7 +14,6 @@ import SUSF from "./features/SUSF";
 import SRO from "./features/SRO";
 import ECSEmpower from "./features/ECSEmpower";
 import USAIS from "./features/USAIS";
-import useSelector from "./common/hooks/useSelector";
 import useDispatch from "./common/hooks/useDispatch";
 import { doGetQuestions } from "./state/state";
 

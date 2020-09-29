@@ -3,12 +3,20 @@ import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 
 import { ReactComponent as ECSSLogo } from "../images/ecss-logo.svg";
+import { ReactComponent as HackasotonLogo } from "../images/hackasoton-logo.svg";
+import { ReactComponent as DevECSLogo } from "../images/devecs-logo.svg";
 import { ReactComponent as FutureWorldsLogo } from "../images/future-worlds-logo.svg";
 import { ReactComponent as EmpowerLogo } from "../images/empower-logo.svg";
-import { ReactComponent as MedTechLogo } from "../images/medtech-logo.svg";
 import { ReactComponent as RoboSocLogo } from "../images/robosoc-logo.svg";
+import { ReactComponent as ToastrackLogo } from "../images/toastrack-logo.svg";
+import { ReactComponent as SoapboxRacersLogo } from "../images/soapbox-logo.svg";
+import { ReactComponent as SUCSSLogo } from "../images/cyber-sec-soc-logo.svg";
 import { ReactComponent as SUSFLogo } from "../images/susf-logo.svg";
+import { ReactComponent as SROLogo } from "../images/sro-logo.svg";
+import { ReactComponent as ECSSFC } from "../images/ecss-fc-logo.svg";
 import { ReactComponent as SUWSLogo } from "../images/suws-logo.svg";
+import { ReactComponent as USAISLogo } from "../images/usais-logo.svg";
+import { ReactComponent as MedTechLogo } from "../images/medtech-logo.svg";
 
 const fadeIn = keyframes`
 0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}`;
@@ -117,6 +125,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <HackasotonLogo x="23" y="23" width={"55%"} height={"55%"} />
             </svg>
           }
         />
@@ -125,6 +134,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <DevECSLogo x="15" y="3" width={"95%"} height={"95%"} />
             </svg>
           }
         />
@@ -160,6 +170,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <ToastrackLogo x="20" y="18" width={"60%"} height={"60%"} />
             </svg>
           }
         />
@@ -168,6 +179,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <SoapboxRacersLogo x="21" y="20" width={"60%"} height={"60%"} />
             </svg>
           }
         />
@@ -176,6 +188,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <SUCSSLogo x="15" y="16" width={"70%"} height={"70%"} />
             </svg>
           }
         />
@@ -193,6 +206,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <SROLogo x="21" y="20" width={"60%"} height={"60%"} />
             </svg>
           }
         />
@@ -201,6 +215,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <ECSSFC x="20" y="18" width={"65%"} height={"65%"} />
             </svg>
           }
         />
@@ -218,6 +233,7 @@ function WelcomeScreen() {
           logo={
             <svg height="100" width="100">
               <circle cx="50" cy="50" r="40" fill="white"></circle>
+              <USAISLogo x="20" y="20" width={"60%"} height={"60%"} />
             </svg>
           }
         />
