@@ -91,11 +91,11 @@ function SUCSS() {
           content={
             <TippyContent>
               <TippyHeader>Sign up</TippyHeader>
-              <p>
-                This society is currently not affiliated with SUSU. Click the
-                button below to view SUSU affiliated societies!
-              </p>
-              <TippyButton href="https://www.susu.org" target="_blank">
+              <p>Sign up to SUCSS through SUSU by clicking the button below!</p>
+              <TippyButton
+                href="https://www.susu.org/groups/cyber-security-society"
+                target="_blank"
+              >
                 Sign Up
               </TippyButton>
             </TippyContent>

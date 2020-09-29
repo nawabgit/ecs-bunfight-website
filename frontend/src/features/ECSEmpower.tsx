@@ -102,10 +102,13 @@ function ECSEmpower() {
             <TippyContent>
               <TippyHeader>Sign up</TippyHeader>
               <p>
-                This society is currently not affiliated with SUSU. Click the
-                button below to view SUSU affiliated societies!
+                Sign up to ECS Empower through SUSU by clicking the button
+                below!
               </p>
-              <TippyButton href="https://www.susu.org" target="_blank">
+              <TippyButton
+                href="https://www.susu.org/groups/ecs-empower"
+                target="_blank"
+              >
                 Sign Up
               </TippyButton>
             </TippyContent>
