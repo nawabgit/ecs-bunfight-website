@@ -7,7 +7,6 @@ import {
   mdiArrowLeftThick,
   mdiWeb,
   mdiFacebook,
-  mdiAt,
   mdiDiscord,
   mdiTwitter,
 } from "@mdi/js";
