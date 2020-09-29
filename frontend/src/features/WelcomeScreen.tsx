@@ -86,6 +86,10 @@ const Card = styled(Link)`
   }
 `;
 
+const BetterCard = styled(Card)`
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+`;
+
 const CardText = styled.div`
   text-align: center;
   font-size: 1vw;
@@ -110,15 +114,17 @@ function WelcomeScreen() {
   return (
     <>
       <SocietyPanel>
-        <SocietyCard
-          name="ECSS"
-          logo={
-            <svg height="100" width="100">
-              <circle cx="50" cy="50" r="40" fill="white"></circle>
-              <ECSSLogo x="11" y="11" width={"80%"} height={"80%"} />
-            </svg>
+        <BetterCard
+          to={
+            "/" + "ECSS".replace(/\s+/g, "-").replace(/[()]/g, "").toLowerCase()
           }
-        />
+        >
+          <svg height="100" width="100">
+            <circle cx="50" cy="50" r="40" fill="white"></circle>
+            <ECSSLogo x="11" y="11" width={"80%"} height={"80%"} />
+          </svg>
+          <CardText>ECSS</CardText>
+        </BetterCard>
         <SocietyCard
           name="Hackasoton"
           logo={

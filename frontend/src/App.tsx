@@ -16,6 +16,7 @@ import ECSEmpower from "./features/ECSEmpower";
 import USAIS from "./features/USAIS";
 import useDispatch from "./common/hooks/useDispatch";
 import { doGetQuestions } from "./state/state";
+import ECSS from "./features/ECSS";
 
 const AppContainer = styled.div`
   display: flex;
@@ -47,6 +48,11 @@ function App() {
         <WelcomeContainer>
           <WelcomeScreen />
         </WelcomeContainer>
+      </Route>
+      <Route path="/ecss">
+        <SocietyContainer>
+          <ECSS />
+        </SocietyContainer>
       </Route>
       <Route path="/hackasoton">
         <SocietyContainer>
