@@ -1,4 +1,7 @@
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
+import { api } from "../store";
+import useSelector from "./hooks/useSelector";
 
 export const IFrame = styled.iframe`
   border-radius: 1%;
@@ -184,3 +187,53 @@ export const Circle = styled.div`
     transition: all 0.2s ease;
   }
 `;
+
+export function Chatbox({ user }: { user: number }) {
+  const { pending, questions } = useSelector((state) => state.questions);
+  const [inputState, setInputState] = useState("");
+  const [sent, setSent] = useState(false);
+
+  return (
+    <>
+      <ChatboxWrapper>
+        {!pending &&
+          questions &&
+          questions
+            .filter((e) => e.user === user)
+            .map(
+              (e) =>
+                e.answer && (
+                  <QuestionWrapper>
+                    <QuestionHeader>{e.title}</QuestionHeader>
+                    <QuestionText>{e.answer.answer_text}</QuestionText>
+                  </QuestionWrapper>
+                )
+            )}
+      </ChatboxWrapper>
+      {sent && (
+        <div style={{ marginTop: "1rem", color: "green" }}>
+          Your question has been received and will be answered shortly.
+        </div>
+      )}
+      <div style={{ display: "flex" }}>
+        <ChatboxInput
+          value={inputState}
+          onChange={(e) => setInputState(e.target.value)}
+          placeholder="Type your question here..."
+        ></ChatboxInput>
+        <ChatboxButton
+          onClick={() => {
+            api.post("/core/questions/", {
+              title: inputState,
+              user: user,
+            });
+            setInputState("");
+            setSent(true);
+          }}
+        >
+          Submit
+        </ChatboxButton>
+      </div>
+    </>
+  );
+}

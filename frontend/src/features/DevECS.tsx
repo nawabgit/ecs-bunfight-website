@@ -29,18 +29,10 @@ import {
   Presentation,
   IFrame,
   Sidebar,
-  ChatboxWrapper,
-  QuestionWrapper,
-  QuestionHeader,
-  QuestionText,
-  ChatboxInput,
-  ChatboxButton,
+  Chatbox,
 } from "../common/societyComponents";
-import useSelector from "../common/hooks/useSelector";
 
 function DevECS() {
-  const { pending, questions } = useSelector((state) => state.questions);
-
   return (
     <CenteredPanel>
       <Wrapper>
@@ -67,23 +59,7 @@ function DevECS() {
               ></IFrame>
             </Route>
             <Route path="/devecs/qna">
-              <ChatboxWrapper>
-                {!pending &&
-                  questions &&
-                  questions.map(
-                    (e) =>
-                      e.answer && (
-                        <QuestionWrapper>
-                          <QuestionHeader>{e.title}</QuestionHeader>
-                          <QuestionText>{e.answer.answer_text}</QuestionText>
-                        </QuestionWrapper>
-                      )
-                  )}
-              </ChatboxWrapper>
-              <div style={{ display: "flex" }}>
-                <ChatboxInput placeholder="Type your question here..."></ChatboxInput>
-                <ChatboxButton>Submit</ChatboxButton>
-              </div>
+              <Chatbox user={2} />
             </Route>
             <Redirect to="/devecs/presentation" />
           </Switch>
