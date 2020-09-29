@@ -53,7 +53,7 @@ function USAIS() {
           <Switch>
             <Route path="/aisoc-usais/presentation">
               <IFrame
-                src="https://docs.google.com/presentation/d/e/2PACX-1vQMck2jL6HG-3wq5K1C7IHW2qpqFXbYqyhllKG3P5C3f8AWVHeq6Y5zS8vul68mEw/embed?start=false&loop=false&delayms=3000"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vSf2pSm26hzYobKokMV0tucDtTMjavDDHaOZk4yI47sGuvzZhNd9SD2nulA4ULsAw/embed?start=false&loop=false&delayms=3000"
                 frameBorder="0"
                 width="800"
                 height="629"
