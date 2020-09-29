@@ -45,6 +45,7 @@ const SocietyPanel = styled(BasePanel)`
     flex: 1;
     width: 100%
     margin-right: 0px;
+    padding: 0px 0px;
     flex-direction: row;
     margin-bottom: 30px;
   }
