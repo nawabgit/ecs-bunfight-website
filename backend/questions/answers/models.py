@@ -7,7 +7,7 @@ class Question(models.Model):
     title = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
     updated_on = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(max_length=500)
+    slug = models.SlugField(max_length=255)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
