@@ -32,6 +32,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function USAIS() {
@@ -145,6 +146,51 @@ function USAIS() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiCalendar} size={0.7} />
+            <span>Friday 2nd October</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiClockTimeFour} size={0.7} />
+            <span>14:45 - 15:30</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiMapMarker} size={0.7} />
+            <span>The Cube</span>
+          </TippyPair>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>
+            Sign up to USAIS by liking their Facebook page - click the link
+            below!
+          </p>
+          <TippyButton href="https://www.facebook.com/UniversityofSouthamptonAISociety">
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiAt} size={0.7} />
+            <TippyHyperlink href="mailto:usais@soton.ac.uk" target="_blank">
+              usais@soton.ac.uk
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiFacebook} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/UniversityofSouthamptonAISociety/"
+              target="_blank"
+            >
+              https://www.facebook.com/UniversityofSouthamptonAISociety/
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }

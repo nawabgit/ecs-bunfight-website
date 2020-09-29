@@ -31,12 +31,17 @@ const AppContainer = styled.div`
 
 const WelcomeContainer = styled(AppContainer)`
   padding: 10vh 8vw;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+  }
 `;
 
 const SocietyContainer = styled(AppContainer)`
   justify-content: center;
   padding: 6vh 4vw;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     padding: 10px 10px;
   }
 `;

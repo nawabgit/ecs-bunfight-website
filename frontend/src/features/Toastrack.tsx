@@ -33,6 +33,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function Toastrack() {
@@ -159,6 +160,61 @@ function Toastrack() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <p>
+            This society is <strong>not</strong> hosting a meet-and-greet. Check
+            their social media instead!
+          </p>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>
+            Sign up to toastrack via liking their Facebook page by clicking the
+            button below!
+          </p>
+          <TippyButton
+            href="https://www.facebook.com/toastrackbus"
+            target="_blank"
+          >
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiAt} size={0.7} />
+            <TippyHyperlink href="mailto:toastrack@soton.ac.uk" target="_blank">
+              toastrack@soton.ac.uk
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiFacebook} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/toastrackbus"
+              target="_blank"
+            >
+              https://www.facebook.com/toastrackbus/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiFacebookMessenger} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/groups/toastrack"
+              target="_blank"
+            >
+              https://www.facebook.com/groups/toastrack/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiDiscord} size={0.7} />
+            <TippyHyperlink href="discord.gg/CzuEwZq/" target="_blank">
+              discord.gg/CzuEwZq/
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }

@@ -39,6 +39,15 @@ const SocietyPanel = styled(BasePanel)`
   margin-right: 1%;
   overflow-y: auto;
   padding: 2% 2%;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex: 1;
+    width: 100%
+    margin-right: 0px;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
 `;
 
 const WelcomePanel = styled(BasePanel)`
@@ -50,6 +59,12 @@ const WelcomePanel = styled(BasePanel)`
   overflow-y: auto;
   margin-left: 1%;
   padding: 2% 2%;
+
+  @media screen and (max-width: 800px) {
+    margin-left: 0px;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+  }
 `;
 
 const JustifiedText = styled.p`
@@ -58,6 +73,7 @@ const JustifiedText = styled.p`
 
 const Card = styled(Link)`
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
@@ -74,6 +90,13 @@ const Card = styled(Link)`
 
   -webkit-animation: ${fadeIn} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: ${fadeIn} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  @media screen and (max-width: 800px) {
+    border-radius: 0px;
+    max-height: 300px;
+    padding: 5px 5px;
+    margin: 10px 0px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -92,13 +115,17 @@ const BetterCard = styled(Card)`
 
 const CardText = styled.div`
   text-align: center;
-  font-size: 1vw;
+  font-size: 14pt;
   padding-top: 5%;
   min-height: 2em;
+
+  @media screen and (max-width: 800px) {
+    min-height: 0px;
+  }
 `;
 
 const WelcomeTitle = styled.div`
-  font-size: 3vw;
+  font-size: 36pt;
   font-weight: 500;
   margin-bottom: 5%;
   font-family: "Built Titling Bold";
@@ -113,6 +140,37 @@ const WelcomeDivider = styled.div`
 function WelcomeScreen() {
   return (
     <>
+      <WelcomePanel>
+        <WelcomeTitle>ECS Expo 2020</WelcomeTitle>
+        <WelcomeDivider />
+        <JustifiedText>
+          Welcome to the ECS Expo 2020! Brought to you by ECSS, this is our
+          digital solution for the ECS Bunfight of previous years hosted during
+          JumpStart. (This site is live until Friday 2nd October 2020.)
+        </JustifiedText>
+        <JustifiedText>
+          The Expo is a showcase of many of the electronics- and/or
+          computing-related societies here at the University for you to
+          consider. Most are run primarily by ECS students, offering unique
+          opportunities to engage in tech: learn more about and network within
+          relevant industries, explore skills and specialisms for your
+          professional development, and/or tinker even outside a lab!
+        </JustifiedText>
+        <JustifiedText>
+          On each society's page, you'll be able to view their introductions in
+          video or presentation format, post questions directly for them to
+          answer on a public pinboard, and view information on scheduled
+          meet-and-greet sessions—if this is a virtual meet-and-greet, you'll
+          also be able to attend directly from their page. Each page will also
+          allow you to sign up to the society directly via their preferred
+          method, e.g. through the SUSU platform or by subscribing to an
+          independent mailing list.
+        </JustifiedText>
+        <JustifiedText>
+          Enjoy browsing the Expo! If you run into any difficulties, contact us
+          at society@ecs.soton.ac.uk.
+        </JustifiedText>
+      </WelcomePanel>
       <SocietyPanel>
         <BetterCard
           to={
@@ -252,37 +310,6 @@ function WelcomeScreen() {
           }
         />
       </SocietyPanel>
-      <WelcomePanel>
-        <WelcomeTitle>ECS Expo 2020</WelcomeTitle>
-        <WelcomeDivider />
-        <JustifiedText>
-          Welcome to the ECS Expo 2020! Brought to you by ECSS, this is our
-          digital solution for the ECS Bunfight of previous years hosted during
-          JumpStart. (This site is live until Friday 2nd October 2020.)
-        </JustifiedText>
-        <JustifiedText>
-          The Expo is a showcase of many of the electronics- and/or
-          computing-related societies here at the University for you to
-          consider. Most are run primarily by ECS students, offering unique
-          opportunities to engage in tech: learn more about and network within
-          relevant industries, explore skills and specialisms for your
-          professional development, and/or tinker even outside a lab!
-        </JustifiedText>
-        <JustifiedText>
-          On each society's page, you'll be able to view their introductions in
-          video or presentation format, post questions directly for them to
-          answer on a public pinboard, and view information on scheduled
-          meet-and-greet sessions—if this is a virtual meet-and-greet, you'll
-          also be able to attend directly from their page. Each page will also
-          allow you to sign up to the society directly via their preferred
-          method, e.g. through the SUSU platform or by subscribing to an
-          independent mailing list.
-        </JustifiedText>
-        <JustifiedText>
-          Enjoy browsing the Expo! If you run into any difficulties, contact us
-          at society@ecs.soton.ac.uk.
-        </JustifiedText>
-      </WelcomePanel>
     </>
   );
 }

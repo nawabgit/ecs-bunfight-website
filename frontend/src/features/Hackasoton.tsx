@@ -33,6 +33,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function Hackasoton() {
@@ -166,6 +167,71 @@ function Hackasoton() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiCalendar} size={0.7} />
+            <span>Tuesday 29th September</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiClockTimeFour} size={0.7} />
+            <span>14:00 - 15:00</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiMapMarker} size={0.7} />
+            <TippyHyperlink
+              href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTU2ODdmMDEtOTVmNy00N2FkLWE1ZDQtZTY0YzYxYjVkMzAy%40thread.v2/0?context=%7b%22Tid%22%3a%224a5378f9-29f4-4d3e-be89-669d03ada9d8%22%2c%22Oid%22%3a%22d3660cdf-e7e8-464c-80b8-4c0fc1153283%22%7d"
+              target="_blank"
+            >
+              Microsoft Teams
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>
+            Sign up to Hackasoton by clicking the button below and joining the
+            mailing list!
+          </p>
+          <TippyButton
+            href="https://hackasoton.us7.list-manage.com/subscribe/post?u=959a42d567d3f16d123db561e&amp;id=83ab3277fa"
+            target="_blank"
+          >
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiFacebook} size={0.7} />
+            <TippyHyperlink
+              href="http://www.facebook.com/HackaSoton/"
+              target="_blank"
+            >
+              http://www.facebook.com/HackaSoton/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiFacebookMessenger} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/groups/HackaSoton/"
+              target="_blank"
+            >
+              http://www.facebook.com/groups/HackaSoton
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiWeb} size={0.7} />
+            <TippyHyperlink
+              href="http://www.hackthesouth.co.uk/"
+              target="_blank"
+            >
+              http://www.hackthesouth.co.uk/
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }

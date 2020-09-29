@@ -31,6 +31,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function SUSF() {
@@ -177,6 +178,62 @@ function SUSF() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <p>
+            This society is <strong>not</strong> hosting a meet-and-greet. Check
+            out their{" "}
+            <TippyHyperlink href="https://sucss.org/discord/" target="_blank">
+              Discord
+            </TippyHyperlink>{" "}
+            instead!
+          </p>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>Sign up to SUSF through SUSU by clicking the button below!</p>
+          <TippyButton href="https://www.susu.org/groups/susf" target="_blank">
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiFacebook} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/suspaceflight/"
+              target="_blank"
+            >
+              https://www.facebook.com/suspaceflight/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiTwitter} size={0.7} />
+            <TippyHyperlink
+              href="https://twitter.com/SUSpaceflight/"
+              target="_blank"
+            >
+              https://twitter.com/SUSpaceflight/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiDiscord} size={0.7} />
+            <TippyHyperlink href="https://discord.gg/c7QEUBb" target="_blank">
+              https://discord.gg/c7QEUBb/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiWeb} size={0.7} />
+            <TippyHyperlink
+              href="https://spaceflight.soton.ac.uk/"
+              target="_blank"
+            >
+              https://spaceflight.soton.ac.uk/
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }

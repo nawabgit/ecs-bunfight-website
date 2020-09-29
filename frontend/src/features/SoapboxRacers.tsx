@@ -35,6 +35,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function SoapboxRacers() {
@@ -143,6 +144,45 @@ function SoapboxRacers() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiCalendar} size={0.7} />
+            <span>Friday 2nd October</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiClockTimeFour} size={0.7} />
+            <span>16:00 - 16:45</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiMapMarker} size={0.7} />
+            <span>The Cube</span>
+          </TippyPair>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>
+            Sign up to the Soapbox Racers society through SUSU by clicking the
+            button below!
+          </p>
+          <TippyButton href="https://www.susu.org/groups/soapbox-racers">
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiFacebook} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/UoSSoapbox/"
+              target="_blank"
+            >
+              https://www.facebook.com/UoSSoapbox/
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }

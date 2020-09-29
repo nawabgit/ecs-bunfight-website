@@ -36,6 +36,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function MedTech() {
@@ -178,6 +179,80 @@ function MedTech() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiCalendar} size={0.7} />
+            <span>Wednesday 30th September</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiClockTimeFour} size={0.7} />
+            <span>18:00 - 20:00</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiMapMarker} size={0.7} />
+            <TippyHyperlink
+              href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MGI2MzJjOWUtZDgwMS00ZDhjLTkyNmUtNTQzZmUzZjdhMDA3%40thread.v2/0?context=%7b%22Tid%22%3a%224a5378f9-29f4-4d3e-be89-669d03ada9d8%22%2c%22Oid%22%3a%229ebb03d7-5ce1-4119-baf5-1893be5addfe%22%7d"
+              target="_blank"
+            >
+              Microsoft Teams
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>
+            Sign up to the MedTech by clicking the button below and joining the
+            mailing list!
+          </p>
+          <TippyButton
+            href="https://mailchi.mp/3ec328019946/sotonmedtech"
+            target="_blank"
+          >
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiAt} size={0.7} />
+            <TippyHyperlink
+              href="mailto:sotonmedtech@gmail.com"
+              target="_blank"
+            >
+              sotonmedtech@gmail.com
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiFacebook} size={0.7} />
+            <TippyHyperlink
+              href="www.facebook.com/sotonmedtech"
+              target="_blank"
+            >
+              www.facebook.com/sotonmedtech/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiLinkedin} size={0.7} />
+            <TippyHyperlink
+              href="www.linkedin.com/company/sotonmedtech/"
+              target="_blank"
+            >
+              www.linkedin.com/company/sotonmedtech/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiInstagram} size={0.7} />
+            <TippyHyperlink
+              href="www.instagram.com/sotonmedtech/"
+              target="_blank"
+            >
+              @sotonmedtech
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }

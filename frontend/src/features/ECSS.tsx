@@ -32,6 +32,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function ECSS() {
@@ -164,6 +165,67 @@ function ECSS() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <p>
+            This society is <strong>not</strong> hosting a meet-and-greet. Check
+            their social media instead!
+          </p>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>Sign up to ECSS through SUSU by clicking the button below!</p>
+          <TippyButton href="https://www.susu.org/groups/ecss" target="_blank">
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiFacebook} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/ecss.soton"
+              target="_blank"
+            >
+              https://www.facebook.com/ecss.soton/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiFacebookMessenger} size={0.7} />
+            <TippyHyperlink
+              href="https://www.facebook.com/groups/ecss.soton/"
+              target="_blank"
+            >
+              https://www.facebook.com/groups/ecss.soton/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiDiscord} size={0.7} />
+            <TippyHyperlink href="discord.gg/sZpF58S" target="_blank">
+              discord.gg/sZpF58S/
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiInstagram} size={0.7} />
+            <TippyHyperlink
+              href="https://www.instagram.com/ecss_soton/"
+              target="_blank"
+            >
+              @ecss_soton
+            </TippyHyperlink>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiWeb} size={0.7} />
+            <TippyHyperlink
+              href="https://www.society.ecs.soton.ac.uk/"
+              target="_blank"
+            >
+              https://www.society.ecs.soton.ac.uk
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }

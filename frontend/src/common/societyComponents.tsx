@@ -31,6 +31,10 @@ export const CenteredPanel = styled.div`
   -webkit-animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: ${fadeIn} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   overflow-y: scroll;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    padding: 0.75em 0.75em;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -38,6 +42,9 @@ export const Wrapper = styled.div`
 
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    flex: 0;
+  }
 `;
 
 export const Header = styled.div`
@@ -46,6 +53,10 @@ export const Header = styled.div`
   width: 100%;
 
   align-self: end;
+  @media screen and (max-width: 800px) {
+    flex: 0;
+    flex-direction: column;
+  }
 `;
 
 export const NavBar = styled.nav`
@@ -55,6 +66,9 @@ export const NavBar = styled.nav`
 
   @media screen and (max-width: 800px) {
     margin-left: 1rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   & > a {
@@ -66,6 +80,10 @@ export const NavBar = styled.nav`
     text-decoration: none;
     color: grey;
     border-bottom: none;
+    @media screen and (max-width: 800px) {
+      margin-top: 0.25rem;
+      margin-left: 0rem;
+    }
 
     &:first-child {
       margin-left: 0rem;
@@ -80,7 +98,6 @@ export const NavBar = styled.nav`
 
 export const Presentation = styled.div`
   align-self: end;
-  margin-right: 1rem;
   margin-left: 5rem;
   margin-top: 1rem;
   @media screen and (max-width: 800px) {
@@ -191,6 +208,10 @@ export const Sidebar = styled.div`
       margin-top: 0px;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Circle = styled.div`
@@ -214,6 +235,14 @@ export const Circle = styled.div`
     -o-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
+  }
+`;
+
+export const MobileDescription = styled.div`
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: block;
   }
 `;
 

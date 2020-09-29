@@ -31,6 +31,7 @@ import {
   IFrame,
   Sidebar,
   Chatbox,
+  MobileDescription,
 } from "../common/societyComponents";
 
 function Robosoc() {
@@ -156,6 +157,47 @@ function Robosoc() {
           </Circle>
         </StyledTippy>
       </Sidebar>
+      <MobileDescription>
+        <TippyContent>
+          <TippyHeader>Meet-and-greet</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiCalendar} size={0.7} />
+            <span>Thursday 1st October</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiClockTimeFour} size={0.7} />
+            <span>15:00</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiMapMarker} size={0.7} />
+            <TippyHyperlink
+              href="https://teams.microsoft.com/l/meetup-join/19%3a11b00874014745ae9bf7fb256fb0b811%40thread.tacv2/1601244796222?context=%7b%22Tid%22%3a%224a5378f9-29f4-4d3e-be89-669d03ada9d8%22%2c%22Oid%22%3a%22c08e33eb-3dfb-49c7-bf29-e5008ffb01fe%22%7d"
+              target="_blank"
+            >
+              Microsoft Teams
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Sign up</TippyHeader>
+          <p>Sign up to Robosoc through SUSU by clicking the button below!</p>
+          <TippyButton
+            href="https://www.susu.org/groups/robosoc"
+            target="_blank"
+          >
+            Sign Up
+          </TippyButton>
+        </TippyContent>
+        <TippyContent>
+          <TippyHeader>Social platforms</TippyHeader>
+          <TippyPair>
+            <Icon path={mdiDiscord} size={0.7} />
+            <TippyHyperlink href="https://discord.gg/FCfW2A/" target="_blank">
+              https://discord.gg/FCfW2A/
+            </TippyHyperlink>
+          </TippyPair>
+        </TippyContent>
+      </MobileDescription>
     </CenteredPanel>
   );
 }
