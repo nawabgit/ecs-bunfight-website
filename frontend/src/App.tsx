@@ -19,6 +19,7 @@ import { doGetQuestions } from "./state/state";
 import ECSS from "./features/ECSS";
 import Toastrack from "./features/Toastrack";
 import ECSSFC from "./features/ECSSFC";
+import MedTech from "./features/MedTech";
 
 const AppContainer = styled.div`
   display: flex;
@@ -119,6 +120,11 @@ function App() {
       <Route path="/aisoc-usais">
         <SocietyContainer>
           <USAIS />
+        </SocietyContainer>
+      </Route>
+      <Route path="/medtech">
+        <SocietyContainer>
+          <MedTech />
         </SocietyContainer>
       </Route>
       <Redirect to="/" />

@@ -62,7 +62,7 @@ function Toastrack() {
               ></IFrame>
             </Route>
             <Route path="/toastrack/qna">
-              <Chatbox user={"toastrack"} />
+              <Chatbox user={"Toastrack"} />
             </Route>
             <Redirect to="/toastrack/presentation" />
           </Switch>
