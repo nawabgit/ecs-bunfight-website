@@ -16,6 +16,7 @@ import {
 } from "@mdi/js";
 import { Link, NavLink, Route, Switch, Redirect } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
+import styled from "styled-components";
 
 import {
   StyledTippy,
@@ -37,6 +38,10 @@ import {
   Chatbox,
   MobileDescription,
 } from "../common/societyComponents";
+
+const SmallHeader = styled.h4`
+  margin: 1rem 0rem 0.25rem;
+`;
 
 function SoapboxRacers() {
   return (
@@ -77,6 +82,25 @@ function SoapboxRacers() {
           content={
             <TippyContent>
               <TippyHeader>Meet-and-greet</TippyHeader>
+              <SmallHeader>{"Online Q&A"}</SmallHeader>
+              <TippyPair>
+                <Icon path={mdiCalendar} size={0.7} />
+                <span>Tuesday 29th September</span>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiClockTimeFour} size={0.7} />
+                <span>16:00 - 18:00</span>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiMapMarker} size={0.7} />
+                <TippyHyperlink
+                  href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A00687f0db3c244f685e6d3f3312d602d%40thread.tacv2%2FGeneral%3FgroupId%3D40ff6040-d0cb-4961-99ea-6190f54f9dfd%26tenantId%3D4a5378f9-29f4-4d3e-be89-669d03ada9d8&type=channel&deeplinkId=936c95b1-1986-40b2-9035-2e563cf2137a&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true"
+                  target="_blank"
+                >
+                  Microsoft Teams
+                </TippyHyperlink>
+              </TippyPair>
+              <SmallHeader>{"In-person meet-and-greet"}</SmallHeader>
               <TippyPair>
                 <Icon path={mdiCalendar} size={0.7} />
                 <span>Friday 2nd October</span>
@@ -87,7 +111,9 @@ function SoapboxRacers() {
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiMapMarker} size={0.7} />
-                <span>The Cube</span>
+                <span>
+                  The Cube <strong>(limited spaces)</strong>
+                </span>
               </TippyPair>
             </TippyContent>
           }
@@ -147,6 +173,25 @@ function SoapboxRacers() {
       <MobileDescription>
         <TippyContent>
           <TippyHeader>Meet-and-greet</TippyHeader>
+          <SmallHeader>{"Online Q&A"}</SmallHeader>
+          <TippyPair>
+            <Icon path={mdiCalendar} size={0.7} />
+            <span>Tuesday 29th September</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiClockTimeFour} size={0.7} />
+            <span>16:00 - 18:00</span>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiMapMarker} size={0.7} />
+            <TippyHyperlink
+              href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A00687f0db3c244f685e6d3f3312d602d%40thread.tacv2%2FGeneral%3FgroupId%3D40ff6040-d0cb-4961-99ea-6190f54f9dfd%26tenantId%3D4a5378f9-29f4-4d3e-be89-669d03ada9d8&type=channel&deeplinkId=936c95b1-1986-40b2-9035-2e563cf2137a&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true"
+              target="_blank"
+            >
+              Microsoft Teams
+            </TippyHyperlink>
+          </TippyPair>
+          <SmallHeader>{"In-person meet-and-greet"}</SmallHeader>
           <TippyPair>
             <Icon path={mdiCalendar} size={0.7} />
             <span>Friday 2nd October</span>
@@ -157,7 +202,9 @@ function SoapboxRacers() {
           </TippyPair>
           <TippyPair>
             <Icon path={mdiMapMarker} size={0.7} />
-            <span>The Cube</span>
+            <span>
+              The Cube <strong>(limited spaces)</strong>
+            </span>
           </TippyPair>
         </TippyContent>
         <TippyContent>
