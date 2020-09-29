@@ -91,7 +91,10 @@ function ECSS() {
             <TippyContent>
               <TippyHeader>Sign up</TippyHeader>
               <p>Sign up to ECSS through SUSU by clicking the button below!</p>
-              <TippyButton href="susu.org/groups/ecss" target="_blank">
+              <TippyButton
+                href="https://www.susu.org/groups/ecss"
+                target="_blank"
+              >
                 Sign Up
               </TippyButton>
             </TippyContent>
