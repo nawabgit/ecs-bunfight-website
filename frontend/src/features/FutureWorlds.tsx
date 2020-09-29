@@ -203,7 +203,7 @@ function FutureWorlds() {
               </p>
             </TippyContent>
           }
-          placement="left-end"
+          placement="left"
           arrow={true}
           interactive={true}
         >
