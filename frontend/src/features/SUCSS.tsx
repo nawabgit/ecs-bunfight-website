@@ -30,6 +30,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function SUCSS() {
@@ -61,7 +62,7 @@ function SUCSS() {
               ></IFrame>
             </Route>
             <Route path="/cyber-security-society-sucss/qna">
-              <div>:(</div>
+              <Chatbox user={"SUCSS"} />
             </Route>
             <Redirect to="/cyber-security-society-sucss/presentation" />
           </Switch>

@@ -32,6 +32,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function SUWS() {
@@ -63,7 +64,7 @@ function SUWS() {
               ></IFrame>
             </Route>
             <Route path="/wireless-society-suws/qna">
-              <div>:(</div>
+              <Chatbox user={"SUWS"} />
             </Route>
             <Redirect to="/wireless-society-suws/presentation" />
           </Switch>

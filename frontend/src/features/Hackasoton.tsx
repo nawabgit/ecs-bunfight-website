@@ -32,6 +32,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function Hackasoton() {
@@ -61,7 +62,7 @@ function Hackasoton() {
               ></IFrame>
             </Route>
             <Route path="/hackasoton/qna">
-              <div>:(</div>
+              <Chatbox user={"Hackasoton"} />
             </Route>
             <Redirect to="/hackasoton/presentation" />
           </Switch>

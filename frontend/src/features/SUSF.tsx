@@ -31,6 +31,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function SUSF() {
@@ -73,7 +74,7 @@ function SUSF() {
               ></IFrame>
             </Route>
             <Route path="/spaceflight-society-susf/qna">
-              <div>:(</div>
+              <Chatbox user={"SUSF"} />
             </Route>
             <Redirect to="/spaceflight-society-susf/video" />
           </Switch>

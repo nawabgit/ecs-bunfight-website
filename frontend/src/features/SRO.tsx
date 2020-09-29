@@ -5,11 +5,7 @@ import {
   mdiAccountPlus,
   mdiAccountGroup,
   mdiArrowLeftThick,
-  mdiWeb,
   mdiFacebook,
-  mdiTwitter,
-  mdiLinkedin,
-  mdiInstagram,
   mdiCalendar,
   mdiClockTimeFour,
   mdiMapMarker,
@@ -36,6 +32,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function SRO() {
@@ -66,7 +63,7 @@ function SRO() {
               ></IFrame>
             </Route>
             <Route path="/robotics-outreach-sro/qna">
-              <div>:(</div>
+              <Chatbox user={"SRO"} />
             </Route>
             <Redirect to="/robotics-outreach-sro/video" />
           </Switch>

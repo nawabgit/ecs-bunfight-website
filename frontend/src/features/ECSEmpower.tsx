@@ -31,6 +31,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function ECSEmpower() {
@@ -60,7 +61,7 @@ function ECSEmpower() {
               ></IFrame>
             </Route>
             <Route path="/ecs-empower/qna">
-              <div>:(</div>
+              <Chatbox user={"ECSEmpower"} />
             </Route>
             <Redirect to="/ecs-empower/presentation" />
           </Switch>

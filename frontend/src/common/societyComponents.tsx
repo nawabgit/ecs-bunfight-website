@@ -188,7 +188,7 @@ export const Circle = styled.div`
   }
 `;
 
-export function Chatbox({ user }: { user: number }) {
+export function Chatbox({ user }: { user: string }) {
   const { pending, questions } = useSelector((state) => state.questions);
   const [inputState, setInputState] = useState("");
   const [sent, setSent] = useState(false);

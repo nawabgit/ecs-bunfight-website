@@ -30,6 +30,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function Robosoc() {
@@ -70,7 +71,7 @@ function Robosoc() {
               ></IFrame>
             </Route>
             <Route path="/robosoc/qna">
-              <div>:(</div>
+              <Chatbox user={"Robosoc"} />
             </Route>
             <Redirect to="/robosoc/video" />
           </Switch>

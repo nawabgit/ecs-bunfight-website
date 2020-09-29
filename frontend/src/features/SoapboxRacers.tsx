@@ -34,6 +34,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function SoapboxRacers() {
@@ -64,7 +65,7 @@ function SoapboxRacers() {
               ></IFrame>
             </Route>
             <Route path="/soapbox-racers/qna">
-              <div>:(</div>
+              <Chatbox user={"SoapboxRacers"} />
             </Route>
             <Redirect to="/soapbox-racers/video" />
           </Switch>

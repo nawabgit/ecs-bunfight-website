@@ -31,6 +31,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function USAIS() {
@@ -60,7 +61,7 @@ function USAIS() {
               ></IFrame>
             </Route>
             <Route path="/aisoc-usais/qna">
-              <div>:(</div>
+              <Chatbox user={"USAIS"} />
             </Route>
             <Redirect to="/aisoc-usais/presentation" />
           </Switch>

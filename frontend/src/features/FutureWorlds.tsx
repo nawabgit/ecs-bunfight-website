@@ -31,6 +31,7 @@ import {
   Presentation,
   IFrame,
   Sidebar,
+  Chatbox,
 } from "../common/societyComponents";
 
 function FutureWorlds() {
@@ -61,7 +62,7 @@ function FutureWorlds() {
               ></IFrame>
             </Route>
             <Route path="/future-worlds/qna">
-              <div>:(</div>
+              <Chatbox user={"FutureWorlds"} />
             </Route>
             <Redirect to="/future-worlds/video" />
           </Switch>

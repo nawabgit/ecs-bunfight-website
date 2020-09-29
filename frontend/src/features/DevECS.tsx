@@ -59,7 +59,7 @@ function DevECS() {
               ></IFrame>
             </Route>
             <Route path="/devecs/qna">
-              <Chatbox user={2} />
+              <Chatbox user={"DevECS"} />
             </Route>
             <Redirect to="/devecs/presentation" />
           </Switch>
