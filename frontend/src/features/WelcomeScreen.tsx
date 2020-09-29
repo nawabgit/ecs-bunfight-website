@@ -52,9 +52,8 @@ const WelcomePanel = styled(BasePanel)`
   padding: 2% 2%;
 `;
 
-const JustifiedText = styled.div`
-  text-align: justify;
-  font-size: 1vw;
+const JustifiedText = styled.p`
+  font-size: 12pt;
 `;
 
 const Card = styled(Link)`
@@ -251,9 +250,31 @@ function WelcomeScreen() {
         <WelcomeTitle>ECS Expo 2020</WelcomeTitle>
         <WelcomeDivider />
         <JustifiedText>
-          Welcome to the virtual ECS Expo 2020. The panel on the left contains
-          all of the ECS-supported societies. Click on a society to view
-          resources and links. Drop-in sessions through zoom are available.
+          Welcome to the ECS Expo 2020! Brought to you by ECSS, this is our
+          digital solution for the ECS Bunfight of previous years hosted during
+          JumpStart. (This site is live until Friday 2nd October 2020.)
+        </JustifiedText>
+        <JustifiedText>
+          The Expo is a showcase of many of the electronics- and/or
+          computing-related societies here at the University for you to
+          consider. Most are run primarily by ECS students, offering unique
+          opportunities to engage in tech: learn more about and network within
+          relevant industries, explore skills and specialisms for your
+          professional development, and/or tinker even outside a lab!
+        </JustifiedText>
+        <JustifiedText>
+          On each society's page, you'll be able to view their introductions in
+          video or presentation format, post questions directly for them to
+          answer on a public pinboard, and view information on scheduled
+          meet-and-greet sessions—if this is a virtual meet-and-greet, you'll
+          also be able to attend directly from their page. Each page will also
+          allow you to sign up to the society directly via their preferred
+          method, e.g. through the SUSU platform or by subscribing to an
+          independent mailing list.
+        </JustifiedText>
+        <JustifiedText>
+          Enjoy browsing the Expo! If you run into any difficulties, contact us
+          at society@ecs.soton.ac.uk.
         </JustifiedText>
       </WelcomePanel>
     </>
