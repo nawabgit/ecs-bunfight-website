@@ -64,7 +64,7 @@ function SUWS() {
               ></IFrame>
             </Route>
             <Route path="/wireless-society-suws/qna">
-              <Chatbox user={"SUWS"} />
+              <Chatbox user={6} />
             </Route>
             <Redirect to="/wireless-society-suws/presentation" />
           </Switch>

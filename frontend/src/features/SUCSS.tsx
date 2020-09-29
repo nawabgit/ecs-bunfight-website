@@ -62,7 +62,7 @@ function SUCSS() {
               ></IFrame>
             </Route>
             <Route path="/cyber-security-society-sucss/qna">
-              <Chatbox user={"SUCSS"} />
+              <Chatbox user={10} />
             </Route>
             <Redirect to="/cyber-security-society-sucss/presentation" />
           </Switch>

@@ -71,7 +71,7 @@ function Robosoc() {
               ></IFrame>
             </Route>
             <Route path="/robosoc/qna">
-              <Chatbox user={"Robosoc"} />
+              <Chatbox user={7} />
             </Route>
             <Redirect to="/robosoc/video" />
           </Switch>

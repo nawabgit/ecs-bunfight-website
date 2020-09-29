@@ -61,7 +61,7 @@ function ECSS() {
               ></IFrame>
             </Route>
             <Route path="/ecss/qna">
-              <Chatbox user={"ECSS"} />
+              <Chatbox user={2} />
             </Route>
             <Redirect to="/ecss/presentation" />
           </Switch>

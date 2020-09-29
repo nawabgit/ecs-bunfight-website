@@ -63,7 +63,7 @@ function FutureWorlds() {
               ></IFrame>
             </Route>
             <Route path="/future-worlds/qna">
-              <Chatbox user={"FutureWorlds"} />
+              <Chatbox user={5} />
             </Route>
             <Redirect to="/future-worlds/video" />
           </Switch>

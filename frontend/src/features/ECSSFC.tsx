@@ -68,7 +68,7 @@ function ECSSFC() {
               ></IFrame>
             </Route>
             <Route path="/ecss-fc/qna">
-              <Chatbox user={"ECSSFC"} />
+              <Chatbox user={13} />
             </Route>
             <Redirect to="/ecss-fc/video" />
           </Switch>

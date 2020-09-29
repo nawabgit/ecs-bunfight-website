@@ -73,7 +73,7 @@ function SUSF() {
               ></IFrame>
             </Route>
             <Route path="/spaceflight-society-susf/qna">
-              <Chatbox user={"SUSF"} />
+              <Chatbox user={11} />
             </Route>
             <Redirect to="/spaceflight-society-susf/video" />
           </Switch>

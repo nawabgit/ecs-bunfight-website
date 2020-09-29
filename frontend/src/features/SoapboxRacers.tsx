@@ -65,7 +65,7 @@ function SoapboxRacers() {
               ></IFrame>
             </Route>
             <Route path="/soapbox-racers/qna">
-              <Chatbox user={"SoapboxRacers"} />
+              <Chatbox user={9} />
             </Route>
             <Redirect to="/soapbox-racers/video" />
           </Switch>

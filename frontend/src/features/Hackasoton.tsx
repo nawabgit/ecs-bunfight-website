@@ -62,7 +62,7 @@ function Hackasoton() {
               ></IFrame>
             </Route>
             <Route path="/hackasoton/qna">
-              <Chatbox user={"Hackasoton"} />
+              <Chatbox user={3} />
             </Route>
             <Redirect to="/hackasoton/presentation" />
           </Switch>

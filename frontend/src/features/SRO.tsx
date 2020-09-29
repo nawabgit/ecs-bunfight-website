@@ -63,7 +63,7 @@ function SRO() {
               ></IFrame>
             </Route>
             <Route path="/robotics-outreach-sro/qna">
-              <Chatbox user={"SRO"} />
+              <Chatbox user={12} />
             </Route>
             <Redirect to="/robotics-outreach-sro/video" />
           </Switch>

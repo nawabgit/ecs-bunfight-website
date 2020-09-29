@@ -65,7 +65,7 @@ function MedTech() {
               ></IFrame>
             </Route>
             <Route path="/medtech/qna">
-              <Chatbox user={"MedTech"} />
+              <Chatbox user={16} />
             </Route>
             <Redirect to="/medtech/presentation" />
           </Switch>

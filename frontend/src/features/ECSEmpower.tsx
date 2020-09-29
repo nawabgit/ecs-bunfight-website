@@ -72,7 +72,7 @@ function ECSEmpower() {
               ></IFrame>
             </Route>
             <Route path="/ecs-empower/qna">
-              <Chatbox user={"ECSEmpower"} />
+              <Chatbox user={14} />
             </Route>
             <Redirect to="/ecs-empower/video" />
           </Switch>

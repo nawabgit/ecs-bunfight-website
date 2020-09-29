@@ -61,7 +61,7 @@ function USAIS() {
               ></IFrame>
             </Route>
             <Route path="/aisoc-usais/qna">
-              <Chatbox user={"USAIS"} />
+              <Chatbox user={15} />
             </Route>
             <Redirect to="/aisoc-usais/presentation" />
           </Switch>
