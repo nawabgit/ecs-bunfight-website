@@ -18,6 +18,7 @@ import useDispatch from "./common/hooks/useDispatch";
 import { doGetQuestions } from "./state/state";
 import ECSS from "./features/ECSS";
 import Toastrack from "./features/Toastrack";
+import ECSSFC from "./features/ECSSFC";
 
 const AppContainer = styled.div`
   display: flex;
@@ -103,6 +104,11 @@ function App() {
       <Route path="/robotics-outreach-sro">
         <SocietyContainer>
           <SRO />
+        </SocietyContainer>
+      </Route>
+      <Route path="/ecss-fc">
+        <SocietyContainer>
+          <ECSSFC />
         </SocietyContainer>
       </Route>
       <Route path="/ecs-empower">
