@@ -36,6 +36,9 @@ const WelcomeContainer = styled(AppContainer)`
 const SocietyContainer = styled(AppContainer)`
   justify-content: center;
   padding: 6vh 4vw;
+  @media screen and (max-width: 600px) {
+    padding: 10px 10px;
+  }
 `;
 
 function App() {

@@ -8,6 +8,12 @@ export const IFrame = styled.iframe`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   margin-right: 100px;
   margin-left: 40px;
+  @media screen and (max-width: 800px) {
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 300px;
+    height: 210px;
+  }
 `;
 
 export const fadeIn = keyframes`
@@ -47,6 +53,10 @@ export const NavBar = styled.nav`
   align-items: center;
   margin-left: 3.5rem;
 
+  @media screen and (max-width: 800px) {
+    margin-left: 1rem;
+  }
+
   & > a {
     margin-left: 2rem;
 
@@ -73,6 +83,10 @@ export const Presentation = styled.div`
   margin-right: 1rem;
   margin-left: 5rem;
   margin-top: 1rem;
+  @media screen and (max-width: 800px) {
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
 `;
 
 export const ChatboxWrapper = styled.div`
@@ -90,6 +104,11 @@ export const ChatboxWrapper = styled.div`
   & > div {
     margin: 0.5rem 0rem;
   }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 300px;
+  }
 `;
 
 export const ChatboxInput = styled.input`
@@ -105,6 +124,10 @@ export const ChatboxInput = styled.input`
 
   height: 50px;
   width: 80%;
+
+  @media screen and (max-width: 800px) {
+    width: 200px;
+  }
 `;
 
 export const ChatboxButton = styled.button`
@@ -120,6 +143,12 @@ export const ChatboxButton = styled.button`
   margin: 1.5rem 0rem;
   width: 18%;
   margin-left: 2%;
+
+  @media screen and (max-width: 800px) {
+    margin-left: 20px;
+    width: 150px;
+    height: 50px;
+  }
 
   cursor: pointer;
   &:hover {
