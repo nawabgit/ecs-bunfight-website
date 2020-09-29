@@ -6,7 +6,6 @@ import useSelector from "./hooks/useSelector";
 export const IFrame = styled.iframe`
   border-radius: 1%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  margin-right: 100px;
   margin-left: 40px;
   @media screen and (max-width: 800px) {
     margin-left: 10px;
@@ -123,7 +122,8 @@ export const ChatboxWrapper = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    width: 100%;
+    margin-left: 10px;
+    width: 250px;
     height: 300px;
   }
 `;
@@ -143,7 +143,8 @@ export const ChatboxInput = styled.input`
   width: 80%;
 
   @media screen and (max-width: 800px) {
-    width: 200px;
+    margin-left: 10px;
+    width: 150px;
   }
 `;
 
@@ -163,7 +164,7 @@ export const ChatboxButton = styled.button`
 
   @media screen and (max-width: 800px) {
     margin-left: 20px;
-    width: 150px;
+    width: 80px;
     height: 50px;
   }
 
