@@ -138,6 +138,17 @@ function ECSS() {
                 >
                   https://discord.gg/sZpF58S/
                 </TippyHyperlink>
+                <strong style={{ marginLeft: 5 }}> (Main)</strong>
+              </TippyPair>
+              <TippyPair>
+                <Icon path={mdiDiscord} size={0.7} />
+                <TippyHyperlink
+                  href="https://discord.gg/uqDUwYk"
+                  target="_blank"
+                >
+                  https://discord.gg/uqDUwYk
+                </TippyHyperlink>
+                <strong style={{ marginLeft: 5 }}> (Freshers)</strong>
               </TippyPair>
               <TippyPair>
                 <Icon path={mdiInstagram} size={0.7} />
@@ -206,8 +217,16 @@ function ECSS() {
           <TippyPair>
             <Icon path={mdiDiscord} size={0.7} />
             <TippyHyperlink href="https://discord.gg/sZpF58S" target="_blank">
-              https://discord.gg/sZpF58S
+              https://discord.gg/sZpF58S/
             </TippyHyperlink>
+            <strong style={{ marginLeft: 5 }}> (Main)</strong>
+          </TippyPair>
+          <TippyPair>
+            <Icon path={mdiDiscord} size={0.7} />
+            <TippyHyperlink href="https://discord.gg/uqDUwYk" target="_blank">
+              https://discord.gg/uqDUwYk
+            </TippyHyperlink>
+            <strong style={{ marginLeft: 5 }}> (Freshers)</strong>
           </TippyPair>
           <TippyPair>
             <Icon path={mdiInstagram} size={0.7} />
